@@ -1,6 +1,6 @@
-# Full-Stack Development Guide 
+# Front-End Coding Guidelines
 
-Installation Guides For Full-Stack Developers Using MAC OS 
+Installation Coding Guidelines For Front-End Developers.
 
 ## Getting started
 
@@ -37,11 +37,6 @@ $ hexo s --watch
   ```bash
   hexo deploy
   ```
-
-## Contributors
-
-- English - [mamboer]
-- 简体中文 - [天哥]
 
 ## License
 
