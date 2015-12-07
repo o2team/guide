@@ -1,0 +1,47 @@
+menu:
+  docs: 文档
+  api: API
+  news: 新闻
+  plugins: 插件
+  themes: 主题
+  search: 搜索
+
+index:
+  get_started: 开始使用
+
+page:
+  contents: 目录
+  back_to_top: 回到顶部
+  improve: 改进本文
+  prev: 上一页
+  next: 下一页
+  last_updated: 上次更新：%s
+
+sidebar:
+  docs:
+    getting_started: 开始使用
+    overview: 概述
+    common: 通用
+    issues: 常见问题
+    html: HTML规范
+    html_code: 代码规范
+    html_note: 注释规范
+    html_template: 文件模版
+    html_webapp: WebApp Meta
+    image: 图片规范
+    image_format: 图片格式
+    image_size: 图片大小
+    image_quality: 图片质量
+    image_import: 图片引入
+    css: CSS规范
+    css_code: 代码规范
+    css_note: 注释规范
+    css_sass: SASS规范
+    css_reset: 重置样式
+    css_query: 媒体查询
+    name: 命名规范
+    name_dir: 目录命名
+    name_htmlcss: HTML/CSS命名
+    name_image: 图片命名
+    name_class: ClassName命名
+

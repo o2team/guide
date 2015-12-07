@@ -1,0 +1,26 @@
+docs:
+  getting_started:
+    overview: index.html
+    common: common.html
+    issues: issues.html
+  html:
+    html_code: html/code.html
+    html_note: html/note.html
+    html_template: html/template.html
+    html_webapp: html/webapp.html
+  image:
+    image_format: image/format.html
+    image_size: image/size.html
+    image_quality: image/quality.html
+    image_import: image/import.html
+  css:
+    css_code: css/code.html
+    css_note: css/note.html
+    css_sass: css/sass.html
+    css_reset: css/reset.html
+    css_query: css/query.html
+  name:
+    name_dir: name/dir.html
+    name_image: name/image.html
+    name_htmlcss: name/htmlcss.html
+    name_class: name/classname.html
