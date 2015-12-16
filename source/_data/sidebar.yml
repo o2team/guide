@@ -1,8 +1,6 @@
 docs:
   getting_started:
     overview: index.html
-    common: common.html
-    issues: issues.html
   html:
     html_code: html/code.html
     html_note: html/note.html
@@ -19,6 +17,7 @@ docs:
     css_sass: css/sass.html
     css_reset: css/reset.html
     css_query: css/query.html
+    css_webkit: css/webkit.html
   name:
     name_dir: name/dir.html
     name_image: name/image.html

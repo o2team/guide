@@ -35,7 +35,7 @@ $ hexo s --watch
 2. Deploy to the gh-pages branch
 
   ```bash
-  hexo deploy
+  hexo d -g
   ```
 
 ## License

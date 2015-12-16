@@ -36,12 +36,13 @@ sidebar:
     css: CSS规范
     css_code: 代码规范
     css_note: 注释规范
-    css_sass: SASS规范
+    css_sass: SASS 规范
     css_reset: 重置样式
     css_query: 媒体查询
+    css_webkit: Webkit 属性
     name: 命名规范
     name_dir: 目录命名
-    name_htmlcss: HTML/CSS命名
+    name_htmlcss: HTML/CSS 命名
     name_image: 图片命名
-    name_class: ClassName命名
+    name_class: ClassName 命名
 
