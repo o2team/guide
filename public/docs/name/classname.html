@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>ClassName命名 | Aotu.io - 前端代码规范</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://aotu.io/guide/docs/name/classname.html">
+  <!-- Alternative links -->
+  
+    
+    <link rel="alternative" hreflang="zh-cn" href="http://aotu.io/guide/docs/name/classname.html">
+    
+    <link rel="alternative" hreflang="en" href="http://aotu.io/guide/en/docs/name/classname.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/guide/img/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/guide/img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/guide/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/guide/img/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/guide/img/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/guide/img/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/guide/img/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/guide/img/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/guide/img/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css css/dist.style.css -->
+  <link rel="stylesheet" href="/guide/css/navy.css" type="text/css">
+  <!-- endbuild -->
+  <!-- RSS -->
+  <link rel="alternative" href="/guide/atom.xml" title="Aotu.io - 前端代码规范" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="ClassName的命名应该尽量精短、明确，必须以字母开头命名，且全部字母为小写，单词之间统一使用下划线 “_” 连接
+命名原则基于姓氏命名法（继承 + 外来），如下图：
+
+祖先模块不能出现下划线，除了是全站公用模块，如 mod_ 系列的命名：
+推荐：
+&amp;lt;div class=&quot;modulename&quot;&amp;gt;	&amp;lt;div class=&quot;modulename_info&quot;&amp;gt;		&amp;lt;d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ClassName命名">
+<meta property="og:url" content="http://aotu.io/guide/docs/name/classname.html">
+<meta property="og:site_name" content="Aotu.io - 前端代码规范">
+<meta property="og:description" content="ClassName的命名应该尽量精短、明确，必须以字母开头命名，且全部字母为小写，单词之间统一使用下划线 “_” 连接
+命名原则基于姓氏命名法（继承 + 外来），如下图：
+
+祖先模块不能出现下划线，除了是全站公用模块，如 mod_ 系列的命名：
+推荐：
+&amp;lt;div class=&quot;modulename&quot;&amp;gt;	&amp;lt;div class=&quot;modulename_info&quot;&amp;gt;		&amp;lt;d">
+<meta property="og:image" content="http://labs.qiang.it/ppguide/img/standard_jiapu.png">
+<meta property="og:updated_time" content="2015-12-30T08:27:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ClassName命名">
+<meta name="twitter:description" content="ClassName的命名应该尽量精短、明确，必须以字母开头命名，且全部字母为小写，单词之间统一使用下划线 “_” 连接
+命名原则基于姓氏命名法（继承 + 外来），如下图：
+
+祖先模块不能出现下划线，除了是全站公用模块，如 mod_ 系列的命名：
+推荐：
+&amp;lt;div class=&quot;modulename&quot;&amp;gt;	&amp;lt;div class=&quot;modulename_info&quot;&amp;gt;		&amp;lt;d">
+<meta name="twitter:site" content="o2circle">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="ClassName命名">
+  <!-- Baidu Analytics -->
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?bb4b770d7fdf4e05245cd1327199d813";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  <script>
+    var App = {
+        root:'/guide/'    
+    };
+  </script>
+</head>
+
+<body>
+<div class="root">
+  <div id="container" class="container">
+    <header id="header" class="wrapper header">
+  <div id="header-inner" class="inner header-inner">
+    <h1 id="logo-wrap" class="logo-wrap">
+      <a href="/guide/index.html" id="logo" class="logo">前端代码规范</a>
+    </h1>
+    <nav id="main-nav" class="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/guide/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/guide/news/" class="main-nav-link">新闻</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/o2team/guide" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap" class="lang-select-wrap">
+      <label id="lang-select-label" class="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/name/classname.html" class="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    <div id="search-btn-wrap" class="main-nav-item search-btn-wrap">
+      <a id="search-btn" class="main-nav-link st-search-launcher search-btn"><i class="fa fa-search"></i></a>
+    </div>
+    <a id="mobile-nav-toggle" class="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher mobile-search-btn"></a>
+  </div>
+</header>
+
+    <div id="content-wrap" class="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner" class="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">ClassName命名</h1>
+                <a href="https://github.com/o2team/guide/edit/master/source/docs/name/classname.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <p>ClassName的命名应该尽量精短、明确，必须以<strong>字母开头命名</strong>，且<strong>全部字母为小写</strong>，单词之间<strong>统一使用下划线</strong> “_” 连接</p>
+<h2 id="u547D_u540D_u539F_u5219" class="article-heading"><a href="#u547D_u540D_u539F_u5219" class="headerlink" title="命名原则"></a>命名原则<a class="article-anchor" href="#u547D_u540D_u539F_u5219" aria-hidden="true"></a></h2><p>基于姓氏命名法（继承 + 外来），如下图：</p>
+<p><img src="http://labs.qiang.it/ppguide/img/standard_jiapu.png" alt="enter image description here"></p>
+<p>祖先模块不能出现下划线，除了是全站公用模块，如 <code>mod_</code> 系列的命名：</p>
+<p><strong>推荐：</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_son"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_son"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">		...</span><br><span class="line">	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="comment">&lt;!-- 这个是全站公用模块，祖先模块允许直接出现下划线 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"mod_info"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"mod_info_son"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"mod_info_son"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	...		</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>不推荐：</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_son"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_son"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	...		</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在子孙模块数量可预测的情况下，严格继承祖先模块的命名前缀</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_cover"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当子孙模块超过4级或以上的时候，可以考虑在祖先模块内具有识辨性的独立缩写作为新的子孙模块</p>
+<p><strong>推荐：</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_cover"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info"</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_user"</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_user_img"</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">""</span> <span class="attribute">alt</span>=<span class="value">""</span>&gt;</span></span><br><span class="line">    			<span class="comment">&lt;!-- 这个时候 jiui 为 modulename_info_user_img 首字母缩写--&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"jiui_tit"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"jiui_txt"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    			...</span><br><span class="line">    		<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_list"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>不推荐：</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_cover"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info"</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_user"</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_user_img"</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">""</span> <span class="attribute">alt</span>=<span class="value">""</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_user_img_tit"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_user_img_txt"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    			...</span><br><span class="line">    		<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modulename_info_list"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u6A21_u5757_u547D_u540D" class="article-heading"><a href="#u6A21_u5757_u547D_u540D" class="headerlink" title="模块命名"></a>模块命名<a class="article-anchor" href="#u6A21_u5757_u547D_u540D" aria-hidden="true"></a></h2><p>全站公共模块：以 <code>mod_</code> 开头</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"mod_yours"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>业务公共模块：以 <code>业务名_mod_</code> 开头</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"paipai_mod_yours"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5E38_u7528_u547D_u540D_u63A8_u8350" class="article-heading"><a href="#u5E38_u7528_u547D_u540D_u63A8_u8350" class="headerlink" title="常用命名推荐"></a>常用命名推荐<a class="article-anchor" href="#u5E38_u7528_u547D_u540D_u63A8_u8350" aria-hidden="true"></a></h2><p><strong>注意</strong>：ad、banner、gg、guanggao 等有机会和广告挂勾的字眠不建议直接用来做ClassName，因为有些浏览器插件（Chrome的广告拦截插件等）会直接过滤这些类名，因此 </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ad"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这种情况不应该出现</p>
+<p>另外，<strong>敏感不和谐字眼</strong>也不应该出现，如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fuck"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"jer"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"sm"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"isis"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"KMT"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span> </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>ClassName</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>about</td>
+<td>关于</td>
+</tr>
+<tr>
+<td>account</td>
+<td>账户</td>
+</tr>
+<tr>
+<td>arrow</td>
+<td>箭头图标</td>
+</tr>
+<tr>
+<td>article</td>
+<td>文章</td>
+</tr>
+<tr>
+<td>aside</td>
+<td>边栏</td>
+</tr>
+<tr>
+<td>audio</td>
+<td>音频</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>头像</td>
+</tr>
+<tr>
+<td>bg,background</td>
+<td>背景</td>
+</tr>
+<tr>
+<td>bar</td>
+<td>栏（工具类）</td>
+</tr>
+<tr>
+<td>branding</td>
+<td>品牌化</td>
+</tr>
+<tr>
+<td>crumb,breadcrumbs</td>
+<td>面包屑</td>
+</tr>
+<tr>
+<td>btn,button</td>
+<td>按钮</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>标题，说明</td>
+</tr>
+<tr>
+<td>category</td>
+<td>分类</td>
+</tr>
+<tr>
+<td>chart</td>
+<td>图表</td>
+</tr>
+<tr>
+<td>clearfix</td>
+<td>清除浮动</td>
+</tr>
+<tr>
+<td>close</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>col,column</td>
+<td>列</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>评论</td>
+</tr>
+<tr>
+<td>community</td>
+<td>社区</td>
+</tr>
+<tr>
+<td>container</td>
+<td>容器</td>
+</tr>
+<tr>
+<td>content</td>
+<td>内容</td>
+</tr>
+<tr>
+<td>copyright</td>
+<td>版权</td>
+</tr>
+<tr>
+<td>current</td>
+<td>当前态，选中态</td>
+</tr>
+<tr>
+<td>default</td>
+<td>默认</td>
+</tr>
+<tr>
+<td>description</td>
+<td>描述</td>
+</tr>
+<tr>
+<td>details</td>
+<td>细节</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>不可用</td>
+</tr>
+<tr>
+<td>entry</td>
+<td>文章，博文</td>
+</tr>
+<tr>
+<td>error</td>
+<td>错误</td>
+</tr>
+<tr>
+<td>even</td>
+<td>偶数，常用于多行列表或表格中</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>失败（提示）</td>
+</tr>
+<tr>
+<td>feature</td>
+<td>专题</td>
+</tr>
+<tr>
+<td>fewer</td>
+<td>收起</td>
+</tr>
+<tr>
+<td>field</td>
+<td>用于表单的输入区域</td>
+</tr>
+<tr>
+<td>figure</td>
+<td>图</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>筛选</td>
+</tr>
+<tr>
+<td>first</td>
+<td>第一个，常用于列表中</td>
+</tr>
+<tr>
+<td>footer</td>
+<td>页脚</td>
+</tr>
+<tr>
+<td>forum</td>
+<td>论坛</td>
+</tr>
+<tr>
+<td>gallery</td>
+<td>画廊</td>
+</tr>
+<tr>
+<td>group</td>
+<td>模块，清除浮动</td>
+</tr>
+<tr>
+<td>header</td>
+<td>页头</td>
+</tr>
+<tr>
+<td>help</td>
+<td>帮助</td>
+</tr>
+<tr>
+<td>hide</td>
+<td>隐藏</td>
+</tr>
+<tr>
+<td>hightlight</td>
+<td>高亮</td>
+</tr>
+<tr>
+<td>home</td>
+<td>主页</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>图标</td>
+</tr>
+<tr>
+<td>info,information</td>
+<td>信息</td>
+</tr>
+<tr>
+<td>last</td>
+<td>最后一个，常用于列表中</td>
+</tr>
+<tr>
+<td>links</td>
+<td>链接</td>
+</tr>
+<tr>
+<td>login</td>
+<td>登录</td>
+</tr>
+<tr>
+<td>logout</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>logo</td>
+<td>标志</td>
+</tr>
+<tr>
+<td>main</td>
+<td>主体</td>
+</tr>
+<tr>
+<td>menu</td>
+<td>菜单</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>作者、更新时间等信息栏，一般位于标题之下</td>
+</tr>
+<tr>
+<td>module</td>
+<td>模块</td>
+</tr>
+<tr>
+<td>more</td>
+<td>更多（展开）</td>
+</tr>
+<tr>
+<td>msg，message</td>
+<td>消息</td>
+</tr>
+<tr>
+<td>nav,navigation</td>
+<td>导航</td>
+</tr>
+<tr>
+<td>next</td>
+<td>下一页</td>
+</tr>
+<tr>
+<td>nub</td>
+<td>小块</td>
+</tr>
+<tr>
+<td>odd</td>
+<td>奇数，常用于多行列表或表格中</td>
+</tr>
+<tr>
+<td>off</td>
+<td>鼠标离开</td>
+</tr>
+<tr>
+<td>on</td>
+<td>鼠标移过</td>
+</tr>
+<tr>
+<td>output</td>
+<td>输出</td>
+</tr>
+<tr>
+<td>pagination</td>
+<td>分页</td>
+</tr>
+<tr>
+<td>pop,popup</td>
+<td>弹窗</td>
+</tr>
+<tr>
+<td>preview</td>
+<td>预览</td>
+</tr>
+<tr>
+<td>previous</td>
+<td>上一页</td>
+</tr>
+<tr>
+<td>primary</td>
+<td>主要</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>进度条</td>
+</tr>
+<tr>
+<td>promotion</td>
+<td>促销</td>
+</tr>
+<tr>
+<td>rcommd,recommendations</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>reg,register</td>
+<td>注册</td>
+</tr>
+<tr>
+<td>save</td>
+<td>保存</td>
+</tr>
+<tr>
+<td>search</td>
+<td>搜索</td>
+</tr>
+<tr>
+<td>secondary</td>
+<td>次要</td>
+</tr>
+<tr>
+<td>section</td>
+<td>区块</td>
+</tr>
+<tr>
+<td>selected</td>
+<td>已选</td>
+</tr>
+<tr>
+<td>share</td>
+<td>分享</td>
+</tr>
+<tr>
+<td>show</td>
+<td>显示</td>
+</tr>
+<tr>
+<td>sidebar</td>
+<td>边栏，侧栏</td>
+</tr>
+<tr>
+<td>slide</td>
+<td>幻灯片，图片切换</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>sub</td>
+<td>次级的，子级的</td>
+</tr>
+<tr>
+<td>submit</td>
+<td>提交</td>
+</tr>
+<tr>
+<td>subscribe</td>
+<td>订阅</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>副标题</td>
+</tr>
+<tr>
+<td>success</td>
+<td>成功（提示）</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>摘要</td>
+</tr>
+<tr>
+<td>tab</td>
+<td>标签页</td>
+</tr>
+<tr>
+<td>table</td>
+<td>表格</td>
+</tr>
+<tr>
+<td>txt,text</td>
+<td>文本</td>
+</tr>
+<tr>
+<td>thumbnail</td>
+<td>缩略图</td>
+</tr>
+<tr>
+<td>time</td>
+<td>时间</td>
+</tr>
+<tr>
+<td>tips</td>
+<td>提示</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>video</td>
+<td>视频</td>
+</tr>
+<tr>
+<td>wrap</td>
+<td>容器，包，一般用于最外层</td>
+</tr>
+<tr>
+<td>wrapper</td>
+<td>容器，包，一般用于最外层</td>
+</tr>
+</tbody>
+</table>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-12-30T08:27:04.000Z" itemprop="dateModified">上次更新：2015-12-30</time>
+                <a href="/guide/docs/name/htmlcss.html" class="article-footer-prev" title="HTML/CSS 命名"><i class="fa fa-chevron-left"></i><span>上一页</span></a>
+              </footer>
+              
+
+
+
+            </div>
+          </div>
+          <aside class="article-toc" id="article-toc" role="navigation">
+            <div id="article-toc-inner" class="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ul class="nav toc-nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u547D_u540D_u539F_u5219"><span class="nav-text">命名原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6A21_u5757_u547D_u540D"><span class="nav-text">模块命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5E38_u7528_u547D_u540D_u63A8_u8350"><span class="nav-text">常用命名推荐</span></a></li></ul>
+              <a href="#" id="article-toc-top" class="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation" class="sidebar">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="/guide/docs/index.html" class="sidebar-link">概述</a><strong class="sidebar-title">HTML规范</strong><a href="/guide/docs/html/code.html" class="sidebar-link">代码规范</a><a href="/guide/docs/html/note.html" class="sidebar-link">注释规范</a><a href="/guide/docs/html/template.html" class="sidebar-link">文件模版</a><a href="/guide/docs/html/webapp.html" class="sidebar-link">WebApp Meta</a><strong class="sidebar-title">图片规范</strong><a href="/guide/docs/image/format.html" class="sidebar-link">图片格式</a><a href="/guide/docs/image/size.html" class="sidebar-link">图片大小</a><a href="/guide/docs/image/quality.html" class="sidebar-link">图片质量</a><a href="/guide/docs/image/import.html" class="sidebar-link">图片引入</a><strong class="sidebar-title">CSS规范</strong><a href="/guide/docs/css/code.html" class="sidebar-link">代码规范</a><a href="/guide/docs/css/note.html" class="sidebar-link">注释规范</a><a href="/guide/docs/css/sass.html" class="sidebar-link">SASS 规范</a><a href="/guide/docs/css/reset.html" class="sidebar-link">重置样式</a><a href="/guide/docs/css/query.html" class="sidebar-link">媒体查询</a><a href="/guide/docs/css/webkit.html" class="sidebar-link">Webkit 属性</a><strong class="sidebar-title">命名规范</strong><a href="/guide/docs/name/dir.html" class="sidebar-link">目录命名</a><a href="/guide/docs/name/image.html" class="sidebar-link">图片命名</a><a href="/guide/docs/name/htmlcss.html" class="sidebar-link">HTML/CSS 命名</a><a href="/guide/docs/name/classname.html" class="sidebar-link current">ClassName 命名</a></div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <a href="http://zespia.tw/" target="_blank">凹凸实验室</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/o2team/guide" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <div id="mobile-nav-dimmer" class="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav" class="mobile-nav">
+  <div id="mobile-nav-inner" class="mobile-nav-inner">
+    <ul id="mobile-nav-list" class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/guide/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/guide/news/" class="mobile-nav-link">新闻</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/o2team/guide" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="/guide/docs/index.html" class="mobile-nav-link">概述</a><strong class="mobile-nav-title">HTML规范</strong><a href="/guide/docs/html/code.html" class="mobile-nav-link">代码规范</a><a href="/guide/docs/html/note.html" class="mobile-nav-link">注释规范</a><a href="/guide/docs/html/template.html" class="mobile-nav-link">文件模版</a><a href="/guide/docs/html/webapp.html" class="mobile-nav-link">WebApp Meta</a><strong class="mobile-nav-title">图片规范</strong><a href="/guide/docs/image/format.html" class="mobile-nav-link">图片格式</a><a href="/guide/docs/image/size.html" class="mobile-nav-link">图片大小</a><a href="/guide/docs/image/quality.html" class="mobile-nav-link">图片质量</a><a href="/guide/docs/image/import.html" class="mobile-nav-link">图片引入</a><strong class="mobile-nav-title">CSS规范</strong><a href="/guide/docs/css/code.html" class="mobile-nav-link">代码规范</a><a href="/guide/docs/css/note.html" class="mobile-nav-link">注释规范</a><a href="/guide/docs/css/sass.html" class="mobile-nav-link">SASS 规范</a><a href="/guide/docs/css/reset.html" class="mobile-nav-link">重置样式</a><a href="/guide/docs/css/query.html" class="mobile-nav-link">媒体查询</a><a href="/guide/docs/css/webkit.html" class="mobile-nav-link">Webkit 属性</a><strong class="mobile-nav-title">命名规范</strong><a href="/guide/docs/name/dir.html" class="mobile-nav-link">目录命名</a><a href="/guide/docs/name/image.html" class="mobile-nav-link">图片命名</a><a href="/guide/docs/name/htmlcss.html" class="mobile-nav-link">HTML/CSS 命名</a><a href="/guide/docs/name/classname.html" class="mobile-nav-link current">ClassName 命名</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap" class="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label" class="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/name/classname.html" class="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- build:js js/dist.main.js -->
+<script src="/guide/js/jquery.js" type="text/javascript"></script>
+<script src="/guide/js/hammer.js" type="text/javascript"></script>
+<script src="/guide/assets/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script src="/guide/js/lang_select.js" type="text/javascript"></script>
+<script src="/guide/js/toc.js" type="text/javascript"></script>
+<script src="/guide/js/mobile_nav.js" type="text/javascript"></script>
+<!-- endbuild -->
+
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','nxhXzi1rDss_9_P_6zBa');
+</script>
+
+</div>
+</body>
+</html>

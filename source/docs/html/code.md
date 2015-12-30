@@ -144,21 +144,25 @@ HTML元素共有以下5种：
 
 *推荐：*
 
-	<div>
-		<h1>我是h1标题</h1>
-		<p>我是一段文字，我有始有终，浏览器能正确解析</p>
-	</div>
+```html
+<div>
+    <h1>我是h1标题</h1>
+    <p>我是一段文字，我有始有终，浏览器能正确解析</p>
+</div>
 	
-	<br>
+<br>
+```
 	
 *不推荐：*
 
-	<div>
-		<h1>我是h1标题</h1>
-		<p>我是一段文字，我有始无终，浏览器亦能正确解析
-	</div>
+```html
+<div>
+    <h1>我是h1标题</h1>
+    <p>我是一段文字，我有始无终，浏览器亦能正确解析
+</div>
 
-	<br/>
+<br/>
+```
 
 更多关于元素及标签关闭：[#Elements](http://www.w3.org/TR/html5/syntax.html#elements-0)
 
@@ -170,32 +174,38 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 
 *推荐：*
 
-	<div class="demo"></div>
+```html
+<div class="demo"></div>
+```
 
 *不推荐：*
 
-	<div class="DEMO"></div>
+```html
+<div class="DEMO"></div>
 	
-	<DIV CLASS="DEMO"></DIV>
+<DIV CLASS="DEMO"></DIV>
+```
 
 HTML文本、CDATA、JavaScript、meta标签某些属性等内容可大小写混合
-	
-	<!-- 优先使用 IE 最新版本和 Chrome Frame -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-	<!-- HTML文本内容 -->
-	<h1>I AM WHAT I AM </h1>
+```html
+<!-- 优先使用 IE 最新版本和 Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-	<!-- JavaScript 内容 -->
-	<script type="text/javascript">
-		var demoName = 'demoName';
-		...
-	</script>
+<!-- HTML文本内容 -->
+<h1>I AM WHAT I AM </h1>
+
+<!-- JavaScript 内容 -->
+<script type="text/javascript">
+	var demoName = 'demoName';
+	...
+</script>
 	
-	<!-- CDATA 内容 -->
-	<script type="text/javascript"><![CDATA[
-    ...
-	]]></script>
+<!-- CDATA 内容 -->
+<script type="text/javascript"><![CDATA[
+...
+]]></script>
+```
 	
 ### 类型属性
 
@@ -203,13 +213,17 @@ HTML文本、CDATA、JavaScript、meta标签某些属性等内容可大小写混
 
 *推荐：*
 
-	<link rel="stylesheet" href="" >
-	<script src=""></script>
+```html
+<link rel="stylesheet" href="" >
+<script src=""></script>
+```
 	
 *不推荐：*
 
-	<link rel="stylesheet" type="text/css" href="" >
-	<script type="text/javascript" src="" ></script>
+```html
+<link rel="stylesheet" type="text/css" href="" >
+<script type="text/javascript" src="" ></script>
+```
 	
 ### 元素属性
 
@@ -219,16 +233,20 @@ HTML文本、CDATA、JavaScript、meta标签某些属性等内容可大小写混
 
 *推荐：*
 
-	<input type="text">
+```html
+<input type="text">
 	
-	<input type="radio" name="name" checked="checked" >
+<input type="radio" name="name" checked="checked" >
+```
 	
 *不推荐：*
 
-	<input type=text>	
-	<input type='text'>
+```html
+<input type=text>	
+<input type='text'>
 	
-	<input type="radio" name="name" checked >
+<input type="radio" name="name" checked >
+```
 	
 	
 更多关于元素属性：[#Attributes](http://www.w3.org/TR/html5/syntax.html#attributes-0)
@@ -243,11 +261,13 @@ HTML文本、CDATA、JavaScript、meta标签某些属性等内容可大小写混
 在 HTML 中不能使用小于号 “&lt;” 和大于号 “&gt;”特殊字符，浏览器会将它们作为标签解析，若要正确显示，在 HTML 源代码中使用字符实体
 
 *推荐：*
+
 ```html
 <a href="#">more&gt;&gt;</a>
 ```
 
 *不推荐：*
+
 ```html
 <a href="#">more>></a>
 ```
@@ -265,7 +285,8 @@ HTML文本、CDATA、JavaScript、meta标签某些属性等内容可大小写混
 
 ### 纯数字输入框
 
-使用 type="tel" 而不是 type="number"
+使用 `type="tel"` 而不是 `type="number"`
+
 ```html
 <input type="tel">    
 ```
@@ -284,6 +305,7 @@ HTML文本、CDATA、JavaScript、meta标签某些属性等内容可大小写混
 ```
 
 *不推荐：*
+
 ```html
 <div>
     <h1></h1><p></p>
@@ -296,12 +318,14 @@ HTML文本、CDATA、JavaScript、meta标签某些属性等内容可大小写混
 段落元素与标题元素只能嵌套内联元素
 
 *推荐：*
+
 ```html
 <h1><span></span></h1>
 <p><span></span><span></span></p>
 ```
 
 *不推荐：*
+
 ```html
 <h1><div></div></h1>
 <p><div></div><div></div></p>

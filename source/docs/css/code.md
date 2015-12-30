@@ -29,7 +29,7 @@ CSS样式表是一个序列通用字符集，传输和存储过程中，这些�
 4. 引用样式表字符集或文档编码（如果有的话）
 5. 假定为 UTF-8 编码
 
-### 关于 @charset
+### 样式表编码
 
 > Authors using an @charset rule must place the rule at the very beginning of the style sheet, preceded by no characters. (If a byte order mark is appropriate for the encoding used, it may precede the @charset rule.)
 
@@ -42,7 +42,7 @@ CSS样式表是一个序列通用字符集，传输和存储过程中，这些�
 ### 团队约定
 
 * 样式文件必须写上 @charset 规则，并且一定要在样式文件的第一行首个字符位置开始写，编码名用 “UTF-8”
-* 字符 `@charset "";` 都用小写字母，不能出现转义符，编码名允许大小混写
+* 字符 @charset ""; 都用小写字母，不能出现转义符，编码名允许大小混写
 * 考虑到在使用“UTF-8”编码情况下 BOM 对代码的污染和编码显示的问题，在可控范围下，坚决不使用 BOM。（更多关于 BOM 可参考 [BOM的介绍](https://zh.wikipedia.org/wiki/%E4%BD%8D%E5%85%83%E7%B5%84%E9%A0%86%E5%BA%8F%E8%A8%98%E8%99%9F) 和 [「带 BOM 的 UTF-8」和「无 BOM 的 UTF-8」有什么区别？](http://www.zhihu.com/question/20167122) ）
 
 *推荐：*
@@ -110,35 +110,37 @@ CSS样式表是一个序列通用字符集，传输和存储过程中，这些�
 ### 代码大小写
 
 样式选择器，属性名，属性值关键字全部使用小写字母书写，属性字符串允许使用大小写。
+
+```css
+/* 推荐 */
+.jdc{
+	display:block;
+}
 	
-	/* 推荐 */
-	.jdc{
-		display:block;
-	}
-	
-	/* 不推荐 */
-	.JDC{
-		DISPLAY:BLOCK;
-	}
+/* 不推荐 */
+.JDC{
+	DISPLAY:BLOCK;
+}
+```
 
 ### 选择器
 
 * 尽量少用通用选择器 `*`
 * 不使用 ID 选择器
 * 不使用无具体语义定义的标签选择器
-  
-```
+
+```css
 /* 推荐 */
-.jdc {...}
-.jdc li {...}
-.jdc li p{...}
+.jdc {}
+.jdc li {}
+.jdc li p{}
 
 /* 不推荐 */
-*{...}
-#jdc {...}
-.jdc div{...}
+*{}
+#jdc {}
+.jdc div{}
 ```
-	
+
 ### 代码缩进
 
 统一使用四个空格进行代码缩进，使得各编辑器表现一致（各编辑器有相关配置）

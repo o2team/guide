@@ -14,97 +14,117 @@ ClassName的命名应该尽量精短、明确，必须以**字母开头命名**�
 
 **推荐：**
 
-	<div class="modulename">
-		<div class="modulename_info">
-			<div class="modulename_son"></div>
-			<div class="modulename_son"></div>
-			...
-		</div>
+```html
+<div class="modulename">
+	<div class="modulename_info">
+		<div class="modulename_son"></div>
+		<div class="modulename_son"></div>
+		...
 	</div>
+</div>
 	
-	<!-- 这个是全站公用模块，祖先模块允许直接出现下划线 -->
-	<div class="mod_info">
-		<div class="mod_info_son"></div>
-		<div class="mod_info_son"></div>
-		...		
-	</div>
+<!-- 这个是全站公用模块，祖先模块允许直接出现下划线 -->
+<div class="mod_info">
+	<div class="mod_info_son"></div>
+	<div class="mod_info_son"></div>
+	...		
+</div>
+```
 	
 **不推荐：**
 
-	<div class="modulename_info">
-		<div class="modulename_info_son"></div>
-		<div class="modulename_info_son"></div>
-		...		
-	</div>	
+```html
+<div class="modulename_info">
+	<div class="modulename_info_son"></div>
+	<div class="modulename_info_son"></div>
+	...		
+</div>	
+```
 
 在子孙模块数量可预测的情况下，严格继承祖先模块的命名前缀
 
-	<div class="modulename">
-    	<div class="modulename_cover"></div>
-    	<div class="modulename_info"></div>
-	</div>
+```html
+<div class="modulename">
+	<div class="modulename_cover"></div>
+	<div class="modulename_info"></div>
+</div>
+```
 		
 当子孙模块超过4级或以上的时候，可以考虑在祖先模块内具有识辨性的独立缩写作为新的子孙模块
 
 **推荐：**
 
-	<div class="modulename">
-    	<div class="modulename_cover"></div>
-    	<div class="modulename_info">
-        	<div class="modulename_info_user">
-        		<div class="modulename_info_user_img">
-        			<img src="" alt="">
-        			<!-- 这个时候 jiui 为 modulename_info_user_img 首字母缩写-->
-        			<div class="jiui_tit"></div>
-        			<div class="jiui_txt"></div>
-        			...
-        		</div>
-        	</div>
-        	<div class="modulename_info_list"></div>
+```html
+<div class="modulename">
+	<div class="modulename_cover"></div>
+	<div class="modulename_info">
+    	<div class="modulename_info_user">
+    		<div class="modulename_info_user_img">
+    			<img src="" alt="">
+    			<!-- 这个时候 jiui 为 modulename_info_user_img 首字母缩写-->
+    			<div class="jiui_tit"></div>
+    			<div class="jiui_txt"></div>
+    			...
+    		</div>
     	</div>
+    	<div class="modulename_info_list"></div>
 	</div>
+</div>
+```
 	
 **不推荐：**
 
-	<div class="modulename">
-    	<div class="modulename_cover"></div>
-    	<div class="modulename_info">
-        	<div class="modulename_info_user">
-        		<div class="modulename_info_user_img">
-        			<img src="" alt="">
-        			<div class="modulename_info_user_img_tit"></div>
-        			<div class="modulename_info_user_img_txt"></div>
-        			...
-        		</div>
-        	</div>
-        	<div class="modulename_info_list"></div>
+```html
+<div class="modulename">
+	<div class="modulename_cover"></div>
+	<div class="modulename_info">
+    	<div class="modulename_info_user">
+    		<div class="modulename_info_user_img">
+    			<img src="" alt="">
+    			<div class="modulename_info_user_img_tit"></div>
+    			<div class="modulename_info_user_img_txt"></div>
+    			...
+    		</div>
     	</div>
+    	<div class="modulename_info_list"></div>
 	</div>
+</div>
+```
 	
 ## 模块命名
 
 全站公共模块：以 `mod_` 开头
 
-	<div class="mod_yours"></div>
+```html
+<div class="mod_yours"></div>
+```
 
 业务公共模块：以 `业务名_mod_` 开头
 
-	<div class="paipai_mod_yours"></div>
+```html
+<div class="paipai_mod_yours"></div>
+```
 
 ## 常用命名推荐
 
 **注意**：ad、banner、gg、guanggao 等有机会和广告挂勾的字眠不建议直接用来做ClassName，因为有些浏览器插件（Chrome的广告拦截插件等）会直接过滤这些类名，因此 
 
-`<div class="ad"></div>` 这种情况不应该出现
+```html
+<div class="ad"></div>
+```
+
+这种情况不应该出现
 
 另外，**敏感不和谐字眼**也不应该出现，如：
 
-	<div class="fuck"></div>
-	<div class="jer"></div>
-	<div class="sm"></div>
-	<div class="isis"></div> 
-	<div class="KMT"></div> 
-	...
+```html
+<div class="fuck"></div>
+<div class="jer"></div>
+<div class="sm"></div>
+<div class="isis"></div> 
+<div class="KMT"></div> 
+...
+```
 
 | ClassName | 含义 |
 | ------------ | ------------- | 

@@ -23,11 +23,11 @@ Sass 使用 “缩进” 代替 “花括号” 表示属性属于某个选择�
 
 > When running on Ruby 1.9 and later, Sass is aware of the character encoding of documents. Sass follows the CSS spec to determine the encoding of a stylesheet, and falls back to the Ruby string encoding. This means that it first checks the Unicode byte order mark, then the @charset declaration, then the Ruby string encoding. If none of these are set, it will assume the document is in UTF-8.
 
-当在 Ruby1.9或更新的版本运行的时候，SASS 能识辨文档的字符编码。SASS 遵循 CSS 规范去确定样式文件的编码，进而转回 Ruby 字符串编码。这意味着SASS编译的时候会首先检测 BOM，然后到 @charset 声明，再到 Ruby 字符串编码，如果以上都没有设置，SASS 会假定文档的编码为 UTF-8
+当在 Ruby1.9或更新的版本运行的时候，SASS 能识辨文档的字符编码。SASS 遵循 CSS 规范去确定样式文件的编码，进而转回 Ruby 字符串编码。这意味着SASS编译的时候会首先检测 BOM，然后到 @charset 声明，再到 Ruby 字符串编码，如果以上都没有设置，SASS 会认为文档的编码为 UTF-8
 
 ### 团队约定
 
-严格遵守上面 “代码规范” 中的 “编码规范”
+严格遵守上面 “CSS规范” 中的 [“编码规范”](code.html)
 
 更多关于 SASS 编码：[SASS Encodings](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
@@ -69,6 +69,7 @@ SCSS 文件内
 /* module A nav */
 .mod_a_nav {}
 
+
 /* Module B
 ----------------------------------------------------------------*/
 .mod_b {}
@@ -84,25 +85,25 @@ SCSS 文件内
 
 ### 选择器嵌套
 
-``` css
-// CSS
+```scss
+/* CSS */
 .jdc {}
 body .jdc {}
 
-// SCSS
+/* SCSS */
 .jdc {
     body & {}
 }
 ```
 
-``` css
-// CSS
+```scss
+/* CSS */
 .jdc {}
 .jdc_cover {}
 .jdc_info {}
 .jdc_info_name {}
 
-// SCSS
+/* SCSS */
 .jdc {
     &_cover {}
     &_info {
@@ -110,10 +111,11 @@ body .jdc {}
     }
 }
 ```
+
 ### 属性嵌套
 
-```css
-// CSS
+```scss
+/* CSS */
 .jdc {
     background-color: red;
     background-repeat: no-repeat;
@@ -121,7 +123,7 @@ body .jdc {}
     background-position: 0 0;
 }
 
-// SCSS
+/* SCSS */
 .jdc {
     background: {
         color: red;
@@ -136,7 +138,7 @@ body .jdc {}
 
 可复用属性尽量抽离为页面变量，易于统一维护
 
-```
+```scss
 // CSS
 .jdc {
     color: red;
@@ -155,184 +157,197 @@ $color: red;
 
 根据功能定义模块，然后在需要使用的地方通过 `@include` 调用，避免编码时重复输入代码段
 
-    // CSS
-    .jdc_1 {
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
-    }
-    .jdc_2 {
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-    }
+```scss
+// CSS
+.jdc_1 {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.jdc_2 {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
 
-    // SCSS
-    @mixin radius($radius:5px) {
-        -webkit-border-radius: $radius;
-        border-radius: $radius;
-    }
-    .jdc_1 {
-        @include radius; //参数使用默认值
-    }
-    .jdc_2 {
-        @include radius(10px);
-    }
+// SCSS
+@mixin radius($radius:5px) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+.jdc_1 {
+    @include radius; //参数使用默认值
+}
+.jdc_2 {
+    @include radius(10px);
+}
 
 
 
-    // CSS
-    .jdc_1 {
-        background: url(/img/icon.png) no-repeat -10px 0;
-    }
-    .jdc_2 {
-        background: url(/img/icon.png) no-repeat -20px 0;
-    }
+// CSS
+.jdc_1 {
+    background: url(/img/icon.png) no-repeat -10px 0;
+}
+.jdc_2 {
+    background: url(/img/icon.png) no-repeat -20px 0;
+}
 
-    // SCSS
-    @mixin icon($x:0, $y:0) {
-        background: url(/img/icon.png) no-repeat $x, $y;
-    }
-    .jdc_1 {
-        @include icon(-10px, 0);
-    }
-    .jdc_2 {
-        @include icon(-20px, 0);
-    }
+// SCSS
+@mixin icon($x:0, $y:0) {
+    background: url(/img/icon.png) no-repeat $x, $y;
+}
+.jdc_1 {
+    @include icon(-10px, 0);
+}
+.jdc_2 {
+    @include icon(-20px, 0);
+}
+```
 
 
 ## 占位选择器 %
 
 如果不调用则不会有任何多余的 css 文件，占位选择器以 `%` 标识定义，通过 `@extend` 调用
 
+```scss
+//scss
+%borderbox {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.jdc {
+    @extend %borderbox;
+}
+```
 
-    //scss
-    %borderbox {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+## extend 继承
+
+```scss
+// CSS
+.jdc_1 {
+    font-size: 12px;
+    color: red;
+}
+.jdc_2 {
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
+
+// SCSS
+.jdc_1 {
+    font-size: 12px;
+    color: red;
+}
+.jdc_2 {
+    @extend .jdc_1;
+    font-weight: bold;
+}
+
+// 或者
+%font_red {
+    font-size: 12px;
+    color: red;
+}
+.jdc_1 {
+    @extend %font_red;
+}
+.jdc_2 {
+    @extend %font_red;
+    font-weight: bold;
+}
+```
+
+
+## for 循环
+
+```scss
+// CSS
+.jdc_1 {background-position: 0 -20px;}
+.jdc_2 {background-position: 0 -40px;}
+.jdc_3 {background-position: 0 -60px;}
+
+// SCSS
+@for $i from 1 through 3 {
+    .jdc_#{$i} {
+        background-position: 0 (-20px) * $i;
     }
-    .jdc {
-        @extend %borderbox;
-    }
-
-
-## @extend 继承
-
-
-    // CSS
-    .jdc_1 {
-        font-size: 12px;
-        color: red;
-    }
-    .jdc_2 {
-        font-size: 12px;
-        color: red;
-        font-weight: bold;
-    }
-
-    // SCSS
-    .jdc_1 {
-        font-size: 12px;
-        color: red;
-    }
-    .jdc_2 {
-        @extend .jdc_1;
-        font-weight: bold;
-    }
-
-    // 或者
-    %font_red {
-        font-size: 12px;
-        color: red;
-    }
-    .jdc_1 {
-        @extend %font_red;
-    }
-    .jdc_2 {
-        @extend %font_red;
-        font-weight: bold;
-    }
-
-
-#### @for 循环
-
-    // CSS
-    .jdc_1 {background-position: 0 -20px;}
-    .jdc_2 {background-position: 0 -40px;}
-    .jdc_3 {background-position: 0 -60px;}
-
-    // SCSS
-    @for $i from 1 through 3 {
-        .jdc_#{$i} {
-            background-position: 0 (-20px) * $i;
-        }
-    }
+}
+```
 
 注意：`#{}` 是连接符，变量连接使用时需要依赖
 
-#### @each 循环
+## each 循环
 
-    // CSS
-    .jdc_list {
-        background-image: url(/img/jdc_list.png);
+```scss
+// CSS
+.jdc_list {
+    background-image: url(/img/jdc_list.png);
+}
+.jdc_detail {
+    background-image: url(/img/jdc_detail.png);
+}
+
+// SCSS
+@each $name in list, detail {
+    .jdc_#{$name} {
+        background-image: url(/img/jdc_#{$name}.png);
     }
-    .jdc_detail {
-        background-image: url(/img/jdc_detail.png);
+}
+
+
+// CSS
+.jdc_list {
+    background-image: url(/img/jdc_list.png);
+    background-color: red;
+}
+.jdc_detail {
+    background-image: url(/img/jdc_detail.png);
+    background-color: blue;
+}
+
+// SCSS
+@each $name, $color in (list, red), (detail, blue) {
+    .jdc_#{$name} {
+        background-image: url(/img/jdc_#{$name}.png);
+        background-color: $color;
     }
-
-    // SCSS
-    @each $name in list, detail {
-        .jdc_#{$name} {
-            background-image: url(/img/jdc_#{$name}.png);
-        }
-    }
+}
+```
 
 
-    // CSS
-    .jdc_list {
-        background-image: url(/img/jdc_list.png);
-        background-color: red;
-    }
-    .jdc_detail {
-        background-image: url(/img/jdc_detail.png);
-        background-color: blue;
-    }
+## function 函数
 
-    // SCSS
-    @each $name, $color in (list, red), (detail, blue) {
-        .jdc_#{$name} {
-            background-image: url(/img/jdc_#{$name}.png);
-            background-color: $color;
-        }
-    }
+```scss
+@function pxToRem($px) {
+    @return $px / 10px * 1rem;
+}
+.jdc {
+    font-size: pxToRem(12px);
+}
+```
 
 
-#### @function 函数
-
-    @function pxToRem($px) {
-        @return $px / 10px * 1rem;
-    }
-    .jdc {
-        font-size: pxToRem(12px);
-    }
-
-
-#### 运算规范
+## 运算规范
 
 运算符之间空出一个空格
 
-    .jdc {
-        width: 100px - 50px;
-        height: 30px / 5;
-    }
+```scss
+.jdc {
+    width: 100px - 50px;
+    height: 30px / 5;
+}
+```
 
 注意运算单位，单位同时参与运算，所以 10px 不等于 10，乘除运算时需要特别注意
 
-    // 正确的运算格式
-    .jdc {
-        width: 100px - 50px;
-        width: 100px + 50px;
-        width: 100px * 2;
-        width: 100px / 2;
-    }
+```scss
+// 正确的运算格式
+.jdc {
+    width: 100px - 50px;
+    width: 100px + 50px;
+    width: 100px * 2;
+    width: 100px / 2;
+}
+```
 
 
 
