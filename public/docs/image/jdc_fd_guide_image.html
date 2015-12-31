@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Aotu.io - 前端代码规范</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://aotu.io/guide/docs/image/jdc_fd_guide_image.html">
+  <!-- Alternative links -->
+  
+    
+    <link rel="alternative" hreflang="zh-cn" href="http://aotu.io/guide/docs/image/jdc_fd_guide_image.html">
+    
+    <link rel="alternative" hreflang="en" href="http://aotu.io/guide/en/docs/image/jdc_fd_guide_image.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/guide/img/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/guide/img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/guide/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/guide/img/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/guide/img/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/guide/img/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/guide/img/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/guide/img/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/guide/img/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css css/dist.style.css -->
+  <link rel="stylesheet" href="/guide/css/navy.css" type="text/css">
+  <!-- endbuild -->
+  <!-- RSS -->
+  <link rel="alternative" href="/guide/atom.xml" title="Aotu.io - 前端代码规范" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="图片规范图片格式常见的图片格式有 GIF、PNG8、PNG24、JPEG、WEBP，根据图片格式的特性和场景需要选取适合的图片格式
+GIF
+GIF图象是基于颜色列表的（存储的数据是该点的颜色对应于颜色列表的索引值），最多只支持8位（256色）。GIF文件内部分成许多存储块，用来存储多幅图象或者是决定图象表现行为的控制块，用以实现动画和交互式应用。GIF文件还通过LZW压缩算法压缩图象数据来减少图象">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aotu.io - 前端代码规范">
+<meta property="og:url" content="http://aotu.io/guide/docs/image/jdc_fd_guide_image.html">
+<meta property="og:site_name" content="Aotu.io - 前端代码规范">
+<meta property="og:description" content="图片规范图片格式常见的图片格式有 GIF、PNG8、PNG24、JPEG、WEBP，根据图片格式的特性和场景需要选取适合的图片格式
+GIF
+GIF图象是基于颜色列表的（存储的数据是该点的颜色对应于颜色列表的索引值），最多只支持8位（256色）。GIF文件内部分成许多存储块，用来存储多幅图象或者是决定图象表现行为的控制块，用以实现动画和交互式应用。GIF文件还通过LZW压缩算法压缩图象数据来减少图象">
+<meta property="og:image" content="http://labs.qiang.it/h5/guide/2015q3speed.jpg">
+<meta property="og:image" content="http://labs.qiang.it/h5/guide/Img421935146.jpg">
+<meta property="og:image" content="http://placeholder.qiniudn.com/300x200">
+<meta property="og:updated_time" content="2015-12-24T03:34:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aotu.io - 前端代码规范">
+<meta name="twitter:description" content="图片规范图片格式常见的图片格式有 GIF、PNG8、PNG24、JPEG、WEBP，根据图片格式的特性和场景需要选取适合的图片格式
+GIF
+GIF图象是基于颜色列表的（存储的数据是该点的颜色对应于颜色列表的索引值），最多只支持8位（256色）。GIF文件内部分成许多存储块，用来存储多幅图象或者是决定图象表现行为的控制块，用以实现动画和交互式应用。GIF文件还通过LZW压缩算法压缩图象数据来减少图象">
+<meta name="twitter:site" content="o2circle">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="Aotu.io - 前端代码规范">
+  <!-- Baidu Analytics -->
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?bb4b770d7fdf4e05245cd1327199d813";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  <script>
+    var App = {
+        root:'/guide/'    
+    };
+  </script>
+</head>
+
+<body>
+<div class="root">
+  <div id="container" class="container">
+    <header id="header" class="wrapper header">
+  <div id="header-inner" class="inner header-inner">
+    <h1 id="logo-wrap" class="logo-wrap">
+      <a href="/guide/index.html" id="logo" class="logo">前端代码规范</a>
+    </h1>
+    <nav id="main-nav" class="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/guide/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/guide/news/" class="main-nav-link">新闻</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/o2team/guide" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap" class="lang-select-wrap">
+      <label id="lang-select-label" class="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/image/jdc_fd_guide_image.html" class="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    <div id="search-btn-wrap" class="main-nav-item search-btn-wrap">
+      <a id="search-btn" class="main-nav-link st-search-launcher search-btn"><i class="fa fa-search"></i></a>
+    </div>
+    <a id="mobile-nav-toggle" class="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher mobile-search-btn"></a>
+  </div>
+</header>
+
+    <div id="content-wrap" class="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner" class="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="https://github.com/o2team/guide/edit/master/source/docs/image/jdc_fd_guide_image.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <h2 id="u56FE_u7247_u89C4_u8303" class="article-heading"><a href="#u56FE_u7247_u89C4_u8303" class="headerlink" title="图片规范"></a>图片规范<a class="article-anchor" href="#u56FE_u7247_u89C4_u8303" aria-hidden="true"></a></h2><h3 id="u56FE_u7247_u683C_u5F0F" class="article-heading"><a href="#u56FE_u7247_u683C_u5F0F" class="headerlink" title="图片格式"></a>图片格式<a class="article-anchor" href="#u56FE_u7247_u683C_u5F0F" aria-hidden="true"></a></h3><p>常见的图片格式有 GIF、PNG8、PNG24、JPEG、WEBP，根据图片格式的特性和场景需要选取适合的图片格式</p>
+<h4 id="GIF" class="article-heading"><a href="#GIF" class="headerlink" title="GIF"></a>GIF<a class="article-anchor" href="#GIF" aria-hidden="true"></a></h4><blockquote>
+<p>GIF图象是基于颜色列表的（存储的数据是该点的颜色对应于颜色列表的索引值），最多只支持8位（256色）。GIF文件内部分成许多存储块，用来存储多幅图象或者是决定图象表现行为的控制块，用以实现动画和交互式应用。GIF文件还通过LZW压缩算法压缩图象数据来减少图象尺寸</p>
+</blockquote>
+<h5 id="u7279_u6027" class="article-heading"><a href="#u7279_u6027" class="headerlink" title="特性"></a>特性<a class="article-anchor" href="#u7279_u6027" aria-hidden="true"></a></h5><ul>
+<li>优秀的压缩算法使其在一定程度上保证图像质量的同时将体积变得很小。</li>
+<li>可插入多帧，从而实现动画效果。</li>
+<li>可设置透明色以产生对象浮现于背景之上的效果。</li>
+<li>由于采用了8位压缩，最多只能处理256种颜色，故不宜应用于真彩色图片。</li>
+</ul>
+<p>更多关于GIF：</p>
+<p><a href="https://zh.wikipedia.org/wiki/GIF" target="_blank" rel="external">维基百科 - PNG</a></p>
+<p><a href="http://dev.gameres.com/Program/Visual/Other/GIFDoc.htm" target="_blank" rel="external">GIF文档</a></p>
+<h4 id="PNG" class="article-heading"><a href="#PNG" class="headerlink" title="PNG"></a>PNG<a class="article-anchor" href="#PNG" aria-hidden="true"></a></h4><blockquote>
+<p>PNG是20世纪90年代中期开始开发的图像文件存储格式，其目的是企图替代GIF和TIFF文件格式，同时增加一些GIF文件格式所不具备的特性。流式网络图形格式(Portable Network Graphic Format，PNG)名称来源于非官方的“PNG’s Not GIF”，是一种位图文件(bitmap file)存储格式，读成“ping”。PNG用来存储灰度图像时，灰度图像的深度可多到16位，存储彩色图像时，彩色图像的深度可多到48位，并且还可存储多到16位的α通道数据。PNG使用从LZ77派生的无损数据压缩算法。</p>
+</blockquote>
+<h5 id="u7279_u6027-1" class="article-heading"><a href="#u7279_u6027-1" class="headerlink" title="特性"></a>特性<a class="article-anchor" href="#u7279_u6027-1" aria-hidden="true"></a></h5><ul>
+<li>支持256色调色板技术，文件体积小。</li>
+<li>无损压缩</li>
+<li>最高支持48位真彩色图像以及16位灰度图像。</li>
+<li>支持Alpha通道的透明/半透明特性。</li>
+<li>支持图像亮度的Gamma校准信息。</li>
+<li>支持存储附加文本信息，以保留图像名称、作者、版权、创作时间、注释等信息。</li>
+<li>渐近显示和流式读写，适合在网络传输中快速显示预览效果后再展示全貌。</li>
+<li>使用CRC防止文件出错。</li>
+<li>最新的PNG标准允许在一个文件内存储多幅图像。</li>
+</ul>
+<p>更多关于PNG：</p>
+<p><a href="http://www.libpng.org/pub/png/" target="_blank" rel="external">PNG官方站 - PNG General Information
+</a></p>
+<p><a href="http://dev.gameres.com/Program/Visual/Other/PNGFormat.htm" target="_blank" rel="external">PNG格式</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/PNG" target="_blank" rel="external">维基百科 - PNG</a></p>
+<h4 id="JPEG" class="article-heading"><a href="#JPEG" class="headerlink" title="JPEG"></a>JPEG<a class="article-anchor" href="#JPEG" aria-hidden="true"></a></h4><blockquote>
+<p>JPEG是一种针对照片视频而广泛使用的一种有损压缩标准方法。这个名称代表Joint Photographic Experts Group（联合图像专家小组）。此团队创立于公元1986年，1992年发布了JPEG的标准而在1994年获得了ISO 10918-1的认定</p>
+</blockquote>
+<h5 id="u7279_u6027-2" class="article-heading"><a href="#u7279_u6027-2" class="headerlink" title="特性"></a>特性<a class="article-anchor" href="#u7279_u6027-2" aria-hidden="true"></a></h5><ul>
+<li>适用于储存24位元全采影像</li>
+<li>采取的压缩方式通常为有损压缩</li>
+<li>不支持透明或动画</li>
+<li>压缩比越高影像耗损越大，失真越严重</li>
+<li>压缩比在10左右肉眼无法辨出压缩图与原图的差别</li>
+</ul>
+<p>更多关于JPEG：</p>
+<p><a href="https://zh.wikipedia.org/wiki/JPEG" target="_blank" rel="external">维基百科 - JPEG</a></p>
+<h4 id="WEBP" class="article-heading"><a href="#WEBP" class="headerlink" title="WEBP"></a>WEBP<a class="article-anchor" href="#WEBP" aria-hidden="true"></a></h4><blockquote>
+<p>WebP，是一种同时提供了有损压缩与无损压缩的图片文件格式，派生自视频编码格式 VP8，是由Google在购买On2 Technologies后发展出来。WebP最初在2010年发布，2011年11月8日，Google开始让WebP支持无损压缩和透明色的功能，而在2012年8月16日的参考实做libwebp 0.2.0中正式支持</p>
+</blockquote>
+<h5 id="u7279_u6027-3" class="article-heading"><a href="#u7279_u6027-3" class="headerlink" title="特性"></a>特性<a class="article-anchor" href="#u7279_u6027-3" aria-hidden="true"></a></h5><ul>
+<li>同时提供有损压缩和无损压缩两种图片文件格式</li>
+<li>文件体积小，无损压缩后，比 PNG 文件少了 45％ 的文件大小；有损压缩后，比 JPEG 文件少了 25% - 34% 文件大小</li>
+<li>浏览器兼容差，目前只支持客户端 Chrome 和 Opera 浏览器以及安卓原生浏览器(Andriod 4.0+)，<a href="https://developers.google.com/speed/webp/faq#which_web_browsers_natively_support_webp" target="_blank" rel="external">WebP兼容性</a></li>
+</ul>
+<p>更多关于WebB：</p>
+<p><a href="https://zh.wikipedia.org/wiki/WebP" target="_blank" rel="external">维基百科</a></p>
+<p><a href="http://isux.tencent.com/introduction-of-webp.html" target="_blank" rel="external">WebP探寻之路</a></p>
+<h4 id="u56E2_u961F_u7EA6_u5B9A" class="article-heading"><a href="#u56E2_u961F_u7EA6_u5B9A" class="headerlink" title="团队约定"></a>团队约定<a class="article-anchor" href="#u56E2_u961F_u7EA6_u5B9A" aria-hidden="true"></a></h4><h5 id="u5185_u5BB9_u56FE" class="article-heading"><a href="#u5185_u5BB9_u56FE" class="headerlink" title="内容图"></a>内容图<a class="article-anchor" href="#u5185_u5BB9_u56FE" aria-hidden="true"></a></h5><p>内容图多以商品图等照片类图片形式存在，颜色较为丰富，文件体积较大</p>
+<ul>
+<li>优先考虑 JPEG 格式，条件允许的话优先考虑 WebP 格式</li>
+<li>尽量不使用PNG格式，PNG8 色位太低，PNG24 压缩率低，文件体积大</li>
+</ul>
+<h5 id="u80CC_u666F_u56FE" class="article-heading"><a href="#u80CC_u666F_u56FE" class="headerlink" title="背景图"></a>背景图<a class="article-anchor" href="#u80CC_u666F_u56FE" aria-hidden="true"></a></h5><p>背景图多为图标等颜色比较简单、文件体积不大、起修饰作用的图片</p>
+<ul>
+<li>PNG 与 GIF 格式，优先考虑使用 PNG 格式,PNG格式允许更多的颜色并提供更好的压缩率</li>
+<li>图像颜色比较简单的，如纯色块线条图标，优先考虑使用 PNG8 格式，避免不使用 JPEG 格式</li>
+<li>图像颜色丰富而且图片文件不太大的（40KB 以下）或有半透明效果的优先考虑 PNG24 格式</li>
+<li>图像颜色丰富而且文件比较大的（40KB - 200KB）优先考虑 JPEG 格式</li>
+<li>条件允许的，优先考虑 WebP 代替 PNG 和 JPEG 格式</li>
+</ul>
+<h3 id="u56FE_u7247_u5927_u5C0F" class="article-heading"><a href="#u56FE_u7247_u5927_u5C0F" class="headerlink" title="图片大小"></a>图片大小<a class="article-anchor" href="#u56FE_u7247_u5927_u5C0F" aria-hidden="true"></a></h3><h4 id="u5168_u56FD_u7F51_u901F_u73B0_u72B6" class="article-heading"><a href="#u5168_u56FD_u7F51_u901F_u73B0_u72B6" class="headerlink" title="全国网速现状"></a>全国网速现状<a class="article-anchor" href="#u5168_u56FD_u7F51_u901F_u73B0_u72B6" aria-hidden="true"></a></h4><h5 id="u56FA_u5B9A_u7F51_u7EDC" class="article-heading"><a href="#u56FA_u5B9A_u7F51_u7EDC" class="headerlink" title="固定网络"></a>固定网络<a class="article-anchor" href="#u56FA_u5B9A_u7F51_u7EDC" aria-hidden="true"></a></h5><p>据文章 <a href="http://www.199it.com/archives/399272.html" target="_blank" rel="external">《2015年Q3中国宽带速率状况报告》</a>，2015第三季全国平均速度整体情况：</p>
+<p><img src="http://labs.qiang.it/h5/guide/2015q3speed.jpg" alt="image"></p>
+<p>中国固定宽带互联网网络平均网络下载速率达到7.90 Mbit/s，用户进行网页浏览的平均首屏呈现时间为2.18s，平均视频下载速率为6.41Mbit/s</p>
+<h5 id="u79FB_u52A8_u7F51_u7EDC" class="article-heading"><a href="#u79FB_u52A8_u7F51_u7EDC" class="headerlink" title="移动网络"></a>移动网络<a class="article-anchor" href="#u79FB_u52A8_u7F51_u7EDC" aria-hidden="true"></a></h5><p>3G网络传输速率理论峰值在3.5Mbps，4G网络传输速率理论上可达到20Mbps，最高可以达到100Mbps。根据 <code>128KB/s=128×8(Kb/s)=1024Kb/s=1Mb/s</code> 的转换来算，3G网络的理论传输速率可达到450KB/s，4G网络的理论传输速率可达到 2.5MB/s ~ 12.5MB/s</p>
+<p>受用户计算机性能、网络设备质量、资源使用情况、网络高峰期、网站服务能力、线路衰耗、信号衰减等多因素影响，3G和4G的实际平均传输速率约为：</p>
+<ul>
+<li>3G：最高值100KB/s，平均值40～50KB/s</li>
+<li>4G：最高值2.75MB/s，平均500～1000KB/s</li>
+</ul>
+<h4 id="3G/4G_u7528_u6237_u5360_u6BD4" class="article-heading"><a href="#3G/4G_u7528_u6237_u5360_u6BD4" class="headerlink" title="3G/4G用户占比"></a>3G/4G用户占比<a class="article-anchor" href="#3G/4G_u7528_u6237_u5360_u6BD4" aria-hidden="true"></a></h4><p>2015年8月移动宽带（3G/4G）用户占比各省分布情况：</p>
+<p><img src="http://labs.qiang.it/h5/guide/Img421935146.jpg" alt="image"></p>
+<p>据文章 <a href="http://www.199it.com/archives/393838.html" target="_blank" rel="external">《工信部：2015年7月底中国4G用户累计超过2.5亿》</a> 介绍：</p>
+<blockquote>
+<p>截至2015年7月底，中国4G用户累计超过2.5亿（全球LTE用户超过7.9亿，全球TD-LTE用户超过2.78亿），已建设4G基站超过153万个，其中完成TD-LTE基站建设超过100万个，多载波聚合等TD-LTE演进技术逐步商用，4G智能手机已经占到国内智能手机市场的82.7%。</p>
+</blockquote>
+<h4 id="u56E2_u961F_u7EA6_u5B9A-1" class="article-heading"><a href="#u56E2_u961F_u7EA6_u5B9A-1" class="headerlink" title="团队约定"></a>团队约定<a class="article-anchor" href="#u56E2_u961F_u7EA6_u5B9A-1" aria-hidden="true"></a></h4><p>中国普通家庭的宽带基本能达到8Mbps，实际速率大约为500—900KB/s，全国3G/4G用户占有比超过了50%，为了保证图片能更好地加载展示给用户看，团队约定：</p>
+<p><strong>PC平台单张的图片的大小不应大于 200KB。</strong></p>
+<p><strong>移动平台单张的图片的大小不应大于 100KB。</strong></p>
+<p><em>（图片的大小约定标准随全国网速的改变而改变）</em></p>
+<h3 id="u56FE_u7247_u8D28_u91CF" class="article-heading"><a href="#u56FE_u7247_u8D28_u91CF" class="headerlink" title="图片质量"></a>图片质量<a class="article-anchor" href="#u56FE_u7247_u8D28_u91CF" aria-hidden="true"></a></h3><ul>
+<li>上线的图片都应该经过压缩处理，压缩后的图片不应该出现肉眼可感知的失真区域</li>
+<li>60质量的JPEG格式图片与质量大于60的相比，肉眼已看不出明显的区别，因此保存 JPEG 图的时候，质量一般控制在60，若保真度要求高的图片可适量提高到 80，图片大小控制在 200KB 以内</li>
+</ul>
+<h3 id="u56FE_u7247_u5F15_u5165" class="article-heading"><a href="#u56FE_u7247_u5F15_u5165" class="headerlink" title="图片引入"></a>图片引入<a class="article-anchor" href="#u56FE_u7247_u5F15_u5165" aria-hidden="true"></a></h3><p>测试内容图应该写上表明图片尺寸的占位图，可以用线上占位图生成服务，如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http://placeholder.qiniudn.com/300x200</span><br></pre></td></tr></table></figure>
+<p><img src="http://placeholder.qiniudn.com/300x200" alt="image"></p>
+<p>HTML 中图片引入不需添加 width、height 属性，alt 属性应该写上</p>
+<p><em>推荐：</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#60;img src=&#34;&#34; alt=&#34;&#34; &#62;</span><br></pre></td></tr></table></figure>
+<p><em>不推荐：</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#60;img src=&#34;&#34; width=&#34;&#34; height=&#34;&#34; &#62;</span><br></pre></td></tr></table></figure>
+<p>CSS 中图片引入不需要引号</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.jdc &#123;&#10;    background-image: url(icon.png);&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS_Sprites_VS_Data_URIs" class="article-heading"><a href="#CSS_Sprites_VS_Data_URIs" class="headerlink" title="CSS Sprites VS Data URIs"></a>CSS Sprites VS Data URIs<a class="article-anchor" href="#CSS_Sprites_VS_Data_URIs" aria-hidden="true"></a></h3><h4 id="CSS_Sprites_u7279_u70B9" class="article-heading"><a href="#CSS_Sprites_u7279_u70B9" class="headerlink" title="CSS Sprites特点"></a>CSS Sprites特点<a class="article-anchor" href="#CSS_Sprites_u7279_u70B9" aria-hidden="true"></a></h4><ul>
+<li>减少请求数</li>
+<li>加速图片的显示</li>
+<li>维护更新成本大</li>
+<li>更多的内存消耗，特别是大体积或有过多空白的 Sprites 图 </li>
+<li>图片渗漏，相邻的不需展示的图片有可能出现在展示元素中，特别是在高清设备移动设备上</li>
+</ul>
+<h4 id="Data_URIs_uFF08base64_u7F16_u7801_uFF09" class="article-heading"><a href="#Data_URIs_uFF08base64_u7F16_u7801_uFF09" class="headerlink" title="Data URIs（base64编码）"></a>Data URIs（base64编码）<a class="article-anchor" href="#Data_URIs_uFF08base64_u7F16_u7801_uFF09" aria-hidden="true"></a></h4><ul>
+<li>减少请求数</li>
+<li>转换文件体积大，大约比原始的二进制大33%</li>
+<li>IE6 / IE7 不支持</li>
+<li>图片显示相对较慢，需要更多的CPU消耗</li>
+</ul>
+<p>更多关于 CSS Sprites 和 Data URIs 可以阅读：</p>
+<p><a href="http://davidbcalhoun.com/2011/when-to-base64-encode-images-and-when-not-to/" target="_blank" rel="external">《When to Base64 Encode Images (and When Not To)》</a></p>
+<p><a href="http://madscript.com/html5/datauri-best-practice/" target="_blank" rel="external">《Data URI 最佳实践》</a></p>
+<p><a href="http://www.99css.com/492/" target="_blank" rel="external">《Data URI&amp;MHTML: 用还是不用？》</a></p>
+<p><a href="http://www.mobify.com/blog/css-sprites-vs-data-uris-which-is-faster-on-mobile/" target="_blank" rel="external">CSS Sprites vs. Data URIs: Which is Faster on Mobile?</a></p>
+<h4 id="u56E2_u961F_u7EA6_u5B9A-2" class="article-heading"><a href="#u56E2_u961F_u7EA6_u5B9A-2" class="headerlink" title="团队约定"></a>团队约定<a class="article-anchor" href="#u56E2_u961F_u7EA6_u5B9A-2" aria-hidden="true"></a></h4><h5 id="CSS_Sprites__u4F7F_u7528_u5EFA_u8BAE" class="article-heading"><a href="#CSS_Sprites__u4F7F_u7528_u5EFA_u8BAE" class="headerlink" title="CSS Sprites 使用建议"></a>CSS Sprites 使用建议<a class="article-anchor" href="#CSS_Sprites__u4F7F_u7528_u5EFA_u8BAE" aria-hidden="true"></a></h5><ul>
+<li>适合使用频率高更新频率低的小图标</li>
+<li>尽量不留太多的空白</li>
+<li>体积较大的图片不合并</li>
+<li>确保要合并的小图坐标数值和合并后的 Sprites 图尺寸均为偶数</li>
+</ul>
+<h5 id="Data_URIs_uFF08base64_u7F16_u7801_uFF09_u4F7F_u7528_u5EFA_u8BAE" class="article-heading"><a href="#Data_URIs_uFF08base64_u7F16_u7801_uFF09_u4F7F_u7528_u5EFA_u8BAE" class="headerlink" title="Data URIs（base64编码）使用建议"></a>Data URIs（base64编码）使用建议<a class="article-anchor" href="#Data_URIs_uFF08base64_u7F16_u7801_uFF09_u4F7F_u7528_u5EFA_u8BAE" aria-hidden="true"></a></h5><ul>
+<li>合适更新频率高的小图片，如某些具备自定义功能的标题icon等</li>
+<li>转换成 Base64 编码的图片应小于 2KB</li>
+<li>移动端不使用 Base64 编码 </li>
+<li>要兼容 IE6/IE7 的不使用</li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-12-24T03:34:46.000Z" itemprop="dateModified">上次更新：2015-12-24</time>
+                <a href="/guide/docs/index.html" class="article-footer-next" title="概述"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+
+
+
+            </div>
+          </div>
+          <aside class="article-toc" id="article-toc" role="navigation">
+            <div id="article-toc-inner" class="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ul class="nav toc-nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u56FE_u7247_u89C4_u8303"><span class="nav-text">图片规范</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u56FE_u7247_u683C_u5F0F"><span class="nav-text">图片格式</span></a><ul class="nav nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GIF"><span class="nav-text">GIF</span></a><ul class="nav nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u7279_u6027"><span class="nav-text">特性</span></a></li></ul></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PNG"><span class="nav-text">PNG</span></a><ul class="nav nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u7279_u6027-1"><span class="nav-text">特性</span></a></li></ul></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JPEG"><span class="nav-text">JPEG</span></a><ul class="nav nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u7279_u6027-2"><span class="nav-text">特性</span></a></li></ul></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WEBP"><span class="nav-text">WEBP</span></a><ul class="nav nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u7279_u6027-3"><span class="nav-text">特性</span></a></li></ul></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u56E2_u961F_u7EA6_u5B9A"><span class="nav-text">团队约定</span></a><ul class="nav nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u5185_u5BB9_u56FE"><span class="nav-text">内容图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u80CC_u666F_u56FE"><span class="nav-text">背景图</span></a></li></ul></li></ul></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u56FE_u7247_u5927_u5C0F"><span class="nav-text">图片大小</span></a><ul class="nav nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5168_u56FD_u7F51_u901F_u73B0_u72B6"><span class="nav-text">全国网速现状</span></a><ul class="nav nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u56FA_u5B9A_u7F51_u7EDC"><span class="nav-text">固定网络</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u79FB_u52A8_u7F51_u7EDC"><span class="nav-text">移动网络</span></a></li></ul></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3G/4G_u7528_u6237_u5360_u6BD4"><span class="nav-text">3G/4G用户占比</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u56E2_u961F_u7EA6_u5B9A-1"><span class="nav-text">团队约定</span></a></li></ul></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u56FE_u7247_u8D28_u91CF"><span class="nav-text">图片质量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u56FE_u7247_u5F15_u5165"><span class="nav-text">图片引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS_Sprites_VS_Data_URIs"><span class="nav-text">CSS Sprites VS Data URIs</span></a><ul class="nav nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS_Sprites_u7279_u70B9"><span class="nav-text">CSS Sprites特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Data_URIs_uFF08base64_u7F16_u7801_uFF09"><span class="nav-text">Data URIs（base64编码）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u56E2_u961F_u7EA6_u5B9A-2"><span class="nav-text">团队约定</span></a><ul class="nav nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS_Sprites__u4F7F_u7528_u5EFA_u8BAE"><span class="nav-text">CSS Sprites 使用建议</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Data_URIs_uFF08base64_u7F16_u7801_uFF09_u4F7F_u7528_u5EFA_u8BAE"><span class="nav-text">Data URIs（base64编码）使用建议</span></a></li></ul></li></ul></li></ul></li></ul>
+              <a href="#" id="article-toc-top" class="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation" class="sidebar">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="/guide/docs/index.html" class="sidebar-link">概述</a><strong class="sidebar-title">HTML规范</strong><a href="/guide/docs/html/code.html" class="sidebar-link">代码规范</a><a href="/guide/docs/html/note.html" class="sidebar-link">注释规范</a><a href="/guide/docs/html/template.html" class="sidebar-link">文件模版</a><a href="/guide/docs/html/webapp.html" class="sidebar-link">WebApp Meta</a><strong class="sidebar-title">图片规范</strong><a href="/guide/docs/image/format.html" class="sidebar-link">图片格式</a><a href="/guide/docs/image/size.html" class="sidebar-link">图片大小</a><a href="/guide/docs/image/quality.html" class="sidebar-link">图片质量</a><a href="/guide/docs/image/import.html" class="sidebar-link">图片引入</a><strong class="sidebar-title">CSS规范</strong><a href="/guide/docs/css/code.html" class="sidebar-link">代码规范</a><a href="/guide/docs/css/note.html" class="sidebar-link">注释规范</a><a href="/guide/docs/css/sass.html" class="sidebar-link">SASS 规范</a><a href="/guide/docs/css/reset.html" class="sidebar-link">重置样式</a><a href="/guide/docs/css/query.html" class="sidebar-link">媒体查询</a><a href="/guide/docs/css/webkit.html" class="sidebar-link">Webkit 属性</a><strong class="sidebar-title">命名规范</strong><a href="/guide/docs/name/dir.html" class="sidebar-link">目录命名</a><a href="/guide/docs/name/image.html" class="sidebar-link">图片命名</a><a href="/guide/docs/name/htmlcss.html" class="sidebar-link">HTML/CSS 命名</a><a href="/guide/docs/name/classname.html" class="sidebar-link">ClassName 命名</a></div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <a href="http://zespia.tw/" target="_blank">凹凸实验室</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/o2team/guide" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <div id="mobile-nav-dimmer" class="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav" class="mobile-nav">
+  <div id="mobile-nav-inner" class="mobile-nav-inner">
+    <ul id="mobile-nav-list" class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/guide/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/guide/news/" class="mobile-nav-link">新闻</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/o2team/guide" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="/guide/docs/index.html" class="mobile-nav-link">概述</a><strong class="mobile-nav-title">HTML规范</strong><a href="/guide/docs/html/code.html" class="mobile-nav-link">代码规范</a><a href="/guide/docs/html/note.html" class="mobile-nav-link">注释规范</a><a href="/guide/docs/html/template.html" class="mobile-nav-link">文件模版</a><a href="/guide/docs/html/webapp.html" class="mobile-nav-link">WebApp Meta</a><strong class="mobile-nav-title">图片规范</strong><a href="/guide/docs/image/format.html" class="mobile-nav-link">图片格式</a><a href="/guide/docs/image/size.html" class="mobile-nav-link">图片大小</a><a href="/guide/docs/image/quality.html" class="mobile-nav-link">图片质量</a><a href="/guide/docs/image/import.html" class="mobile-nav-link">图片引入</a><strong class="mobile-nav-title">CSS规范</strong><a href="/guide/docs/css/code.html" class="mobile-nav-link">代码规范</a><a href="/guide/docs/css/note.html" class="mobile-nav-link">注释规范</a><a href="/guide/docs/css/sass.html" class="mobile-nav-link">SASS 规范</a><a href="/guide/docs/css/reset.html" class="mobile-nav-link">重置样式</a><a href="/guide/docs/css/query.html" class="mobile-nav-link">媒体查询</a><a href="/guide/docs/css/webkit.html" class="mobile-nav-link">Webkit 属性</a><strong class="mobile-nav-title">命名规范</strong><a href="/guide/docs/name/dir.html" class="mobile-nav-link">目录命名</a><a href="/guide/docs/name/image.html" class="mobile-nav-link">图片命名</a><a href="/guide/docs/name/htmlcss.html" class="mobile-nav-link">HTML/CSS 命名</a><a href="/guide/docs/name/classname.html" class="mobile-nav-link">ClassName 命名</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap" class="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label" class="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/image/jdc_fd_guide_image.html" class="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- build:js js/dist.main.js -->
+<script src="/guide/js/jquery.js" type="text/javascript"></script>
+<script src="/guide/js/hammer.js" type="text/javascript"></script>
+<script src="/guide/assets/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script src="/guide/js/lang_select.js" type="text/javascript"></script>
+<script src="/guide/js/toc.js" type="text/javascript"></script>
+<script src="/guide/js/mobile_nav.js" type="text/javascript"></script>
+<!-- endbuild -->
+
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','nxhXzi1rDss_9_P_6zBa');
+</script>
+
+</div>
+</body>
+</html>

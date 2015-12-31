@@ -46,8 +46,6 @@ Setting user-scalable to no also prevents a webpage from scrolling when entering
 [Configuring the Viewport](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html#//apple_ref/doc/uid/TP40006509-SW19)
 [Safari HTML Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
 
-
-
 ### Apple-Specific Meta Tag Keys
 
 #### apple-mobile-web-app-capable

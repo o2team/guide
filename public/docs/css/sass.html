@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>SASS规范 | Aotu.io - 前端代码规范</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://aotu.io/guide/docs/css/sass.html">
+  <!-- Alternative links -->
+  
+    
+    <link rel="alternative" hreflang="zh-cn" href="http://aotu.io/guide/docs/css/sass.html">
+    
+    <link rel="alternative" hreflang="en" href="http://aotu.io/guide/en/docs/css/sass.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/guide/img/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/guide/img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/guide/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/guide/img/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/guide/img/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/guide/img/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/guide/img/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/guide/img/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/guide/img/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/guide/img/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css css/dist.style.css -->
+  <link rel="stylesheet" href="/guide/css/navy.css" type="text/css">
+  <!-- endbuild -->
+  <!-- RSS -->
+  <link rel="alternative" href="/guide/atom.xml" title="Aotu.io - 前端代码规范" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="语法选用SASS有两种语法格式，一种是 SCSS (Sassy CSS)，另一种是缩进格式（Indented Syntax），有时称之为 Sass。
+SCSSSCSS语法基于 CSS 语法扩展，每一个有效的 CSS 文件都是一个有效的具有相同含义的 SCSS 文件，换种说法就是 SCSS 能识别大多数的 CSS hacks 写法和浏览器前缀写法以及早期的 IE 滤镜写法，这种格式以 .scss 作">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SASS规范">
+<meta property="og:url" content="http://aotu.io/guide/docs/css/sass.html">
+<meta property="og:site_name" content="Aotu.io - 前端代码规范">
+<meta property="og:description" content="语法选用SASS有两种语法格式，一种是 SCSS (Sassy CSS)，另一种是缩进格式（Indented Syntax），有时称之为 Sass。
+SCSSSCSS语法基于 CSS 语法扩展，每一个有效的 CSS 文件都是一个有效的具有相同含义的 SCSS 文件，换种说法就是 SCSS 能识别大多数的 CSS hacks 写法和浏览器前缀写法以及早期的 IE 滤镜写法，这种格式以 .scss 作">
+<meta property="og:updated_time" content="2015-12-30T08:12:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SASS规范">
+<meta name="twitter:description" content="语法选用SASS有两种语法格式，一种是 SCSS (Sassy CSS)，另一种是缩进格式（Indented Syntax），有时称之为 Sass。
+SCSSSCSS语法基于 CSS 语法扩展，每一个有效的 CSS 文件都是一个有效的具有相同含义的 SCSS 文件，换种说法就是 SCSS 能识别大多数的 CSS hacks 写法和浏览器前缀写法以及早期的 IE 滤镜写法，这种格式以 .scss 作">
+<meta name="twitter:site" content="o2circle">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="SASS规范">
+  <!-- Baidu Analytics -->
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?bb4b770d7fdf4e05245cd1327199d813";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  <script>
+    var App = {
+        root:'/guide/'    
+    };
+  </script>
+</head>
+
+<body>
+<div class="root">
+  <div id="container" class="container">
+    <header id="header" class="wrapper header">
+  <div id="header-inner" class="inner header-inner">
+    <h1 id="logo-wrap" class="logo-wrap">
+      <a href="/guide/index.html" id="logo" class="logo">前端代码规范</a>
+    </h1>
+    <nav id="main-nav" class="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/guide/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/guide/news/" class="main-nav-link">新闻</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/o2team/guide" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap" class="lang-select-wrap">
+      <label id="lang-select-label" class="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="docs/css/sass.html" class="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    <div id="search-btn-wrap" class="main-nav-item search-btn-wrap">
+      <a id="search-btn" class="main-nav-link st-search-launcher search-btn"><i class="fa fa-search"></i></a>
+    </div>
+    <a id="mobile-nav-toggle" class="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher mobile-search-btn"></a>
+  </div>
+</header>
+
+    <div id="content-wrap" class="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner" class="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">SASS规范</h1>
+                <a href="https://github.com/o2team/guide/edit/master/source/docs/css/sass.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <h2 id="u8BED_u6CD5_u9009_u7528" class="article-heading"><a href="#u8BED_u6CD5_u9009_u7528" class="headerlink" title="语法选用"></a>语法选用<a class="article-anchor" href="#u8BED_u6CD5_u9009_u7528" aria-hidden="true"></a></h2><p>SASS有两种语法格式，一种是 SCSS (Sassy CSS)，另一种是缩进格式（Indented Syntax），有时称之为 Sass。</p>
+<h3 id="SCSS" class="article-heading"><a href="#SCSS" class="headerlink" title="SCSS"></a>SCSS<a class="article-anchor" href="#SCSS" aria-hidden="true"></a></h3><p>SCSS语法基于 CSS 语法扩展，每一个有效的 CSS 文件都是一个有效的具有相同含义的 SCSS 文件，换种说法就是 SCSS 能识别大多数的 CSS hacks 写法和浏览器前缀写法以及早期的 IE 滤镜写法，这种格式以 .scss 作为扩展名。</p>
+<h3 id="Sass" class="article-heading"><a href="#Sass" class="headerlink" title="Sass"></a>Sass<a class="article-anchor" href="#Sass" aria-hidden="true"></a></h3><p>Sass 使用 “缩进” 代替 “花括号” 表示属性属于某个选择器，用 “换行” 代替 “分号” 分隔属性，很多人认为这样做比 SCSS 更容易阅读，书写也更快速。缩进格式也可以使用 Sass 的全部功能，只是与 SCSS 相比个别地方采取了不同的表达方式，具体请查看 <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html" target="_blank" rel="external">the indented syntax reference</a>。这种格式以 .sass 作为拓展名。</p>
+<p>更详细的用法请阅读 SASS 官网文档：<a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank" rel="external">DOCUMENTATION</a></p>
+<h3 id="u56E2_u961F_u7EA6_u5B9A" class="article-heading"><a href="#u56E2_u961F_u7EA6_u5B9A" class="headerlink" title="团队约定"></a>团队约定<a class="article-anchor" href="#u56E2_u961F_u7EA6_u5B9A" aria-hidden="true"></a></h3><p>考虑到 SCSS 语法对 CSS 语法友好的兼容性和扩展性，我们在使用 SASS 编写样式的时候，统一使用 SCSS 语法</p>
+<h2 id="u7F16_u7801_u683C_u5F0F" class="article-heading"><a href="#u7F16_u7801_u683C_u5F0F" class="headerlink" title="编码格式"></a>编码格式<a class="article-anchor" href="#u7F16_u7801_u683C_u5F0F" aria-hidden="true"></a></h2><blockquote>
+<p>When running on Ruby 1.9 and later, Sass is aware of the character encoding of documents. Sass follows the CSS spec to determine the encoding of a stylesheet, and falls back to the Ruby string encoding. This means that it first checks the Unicode byte order mark, then the @charset declaration, then the Ruby string encoding. If none of these are set, it will assume the document is in UTF-8.</p>
+</blockquote>
+<p>当在 Ruby1.9或更新的版本运行的时候，SASS 能识辨文档的字符编码。SASS 遵循 CSS 规范去确定样式文件的编码，进而转回 Ruby 字符串编码。这意味着SASS编译的时候会首先检测 BOM，然后到 @charset 声明，再到 Ruby 字符串编码，如果以上都没有设置，SASS 会认为文档的编码为 UTF-8</p>
+<h3 id="u56E2_u961F_u7EA6_u5B9A-1" class="article-heading"><a href="#u56E2_u961F_u7EA6_u5B9A-1" class="headerlink" title="团队约定"></a>团队约定<a class="article-anchor" href="#u56E2_u961F_u7EA6_u5B9A-1" aria-hidden="true"></a></h3><p>严格遵守上面 “CSS规范” 中的 <a href="code.html">“编码规范”</a></p>
+<p>更多关于 SASS 编码：<a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank" rel="external">SASS Encodings</a></p>
+<h2 id="SASS_u6CE8_u91CA_u89C4_u8303" class="article-heading"><a href="#SASS_u6CE8_u91CA_u89C4_u8303" class="headerlink" title="SASS注释规范"></a>SASS注释规范<a class="article-anchor" href="#SASS_u6CE8_u91CA_u89C4_u8303" aria-hidden="true"></a></h2><p>SASS支持 CSS 标准的多行注释 <code>/* */</code>，同时也支持单行注释 <code>//</code>。</p>
+<ul>
+<li>多行注释在使用非 Compressed 模式进行编译后的输出文件中会保留下来，单行注释 <code>//</code> 侧会被移除</li>
+<li>多行注释和单行注释在 SASS 编译后输出的压缩 CSS 文件都会被移除</li>
+<li>当多行注释内容第一个字符是感叹号 “!” 的时候，即 <code>/*! */</code>，SASS 无论用哪一种编译方式编译注释都会保留</li>
+<li>注释内容可以加入 SASS 变量</li>
+</ul>
+<h3 id="u56E2_u961F_u7EA6_u5B9A-2" class="article-heading"><a href="#u56E2_u961F_u7EA6_u5B9A-2" class="headerlink" title="团队约定"></a>团队约定<a class="article-anchor" href="#u56E2_u961F_u7EA6_u5B9A-2" aria-hidden="true"></a></h3><p>SCSS 文件内</p>
+<ul>
+<li>全部遵循 CSS 注释规范</li>
+<li>不使用 <code>/*! */</code> 注释方式</li>
+<li>注释内不放 SASS 变量</li>
+</ul>
+<p>标准的注释规范如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">charset</span> <span class="string">"UTF-8"</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * @desc File Info</span><br><span class="line"> * @author liqinuo</span><br><span class="line"> * @date 2015-10-10</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Module A</span><br><span class="line">----------------------------------------------------------------*/</span></span><br><span class="line"><span class="class">.mod_a</span> <span class="rules">&#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* module A logo */</span></span><br><span class="line"><span class="class">.mod_a_logo</span> <span class="rules">&#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* module A nav */</span></span><br><span class="line"><span class="class">.mod_a_nav</span> <span class="rules">&#123;&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Module B</span><br><span class="line">----------------------------------------------------------------*/</span></span><br><span class="line"><span class="class">.mod_b</span> <span class="rules">&#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* module B logo */</span></span><br><span class="line"><span class="class">.mod_b_logo</span> <span class="rules">&#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* module B nav */</span></span><br><span class="line"><span class="class">.mod_b_nav</span> <span class="rules">&#123;&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5D4C_u5957_u89C4_u8303" class="article-heading"><a href="#u5D4C_u5957_u89C4_u8303" class="headerlink" title="嵌套规范"></a>嵌套规范<a class="article-anchor" href="#u5D4C_u5957_u89C4_u8303" aria-hidden="true"></a></h2><h3 id="u9009_u62E9_u5668_u5D4C_u5957" class="article-heading"><a href="#u9009_u62E9_u5668_u5D4C_u5957" class="headerlink" title="选择器嵌套"></a>选择器嵌套<a class="article-anchor" href="#u9009_u62E9_u5668_u5D4C_u5957" aria-hidden="true"></a></h3><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* CSS */</span></span><br><span class="line"><span class="class">.jdc</span> &#123;&#125;</span><br><span class="line"><span class="tag">body</span> <span class="class">.jdc</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* SCSS */</span></span><br><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    <span class="tag">body</span> &amp; &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* CSS */</span></span><br><span class="line"><span class="class">.jdc</span> &#123;&#125;</span><br><span class="line"><span class="class">.jdc_cover</span> &#123;&#125;</span><br><span class="line"><span class="class">.jdc_info</span> &#123;&#125;</span><br><span class="line"><span class="class">.jdc_info_name</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* SCSS */</span></span><br><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    &amp;_cover &#123;&#125;</span><br><span class="line">    &amp;_info &#123;</span><br><span class="line">        &amp;_name &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u5C5E_u6027_u5D4C_u5957" class="article-heading"><a href="#u5C5E_u6027_u5D4C_u5957" class="headerlink" title="属性嵌套"></a>属性嵌套<a class="article-anchor" href="#u5C5E_u6027_u5D4C_u5957" aria-hidden="true"></a></h3><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* CSS */</span></span><br><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span><span class="value">: red;</span></span><br><span class="line">    <span class="attribute">background-repeat</span><span class="value">: no-repeat;</span></span><br><span class="line">    <span class="attribute">background-image</span><span class="value">: <span class="function">url</span>(/img/icon.png);</span></span><br><span class="line">    <span class="attribute">background-position</span><span class="value">: <span class="number">0</span> <span class="number">0</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* SCSS */</span></span><br><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    <span class="attribute">background</span><span class="value">: &#123;</span><br><span class="line">        color: red;</span></span><br><span class="line">        <span class="value">repeat</span><span class="value">: no-repeat;</span></span><br><span class="line">        image<span class="value">: <span class="function">url</span>(/img/icon.png);</span></span><br><span class="line">        <span class="attribute">position</span><span class="value">: <span class="number">0</span> <span class="number">0</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u53D8_u91CF" class="article-heading"><a href="#u53D8_u91CF" class="headerlink" title="变量"></a>变量<a class="article-anchor" href="#u53D8_u91CF" aria-hidden="true"></a></h2><p>可复用属性尽量抽离为页面变量，易于统一维护</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">// CSS</span></span><br><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    <span class="attribute">color</span><span class="value">: red;</span></span><br><span class="line">    <span class="attribute">border-color</span><span class="value">: red;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// SCSS</span></span><br><span class="line"><span class="variable">$color</span><span class="value">: red;</span></span><br><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    <span class="attribute">color</span><span class="value">: <span class="variable">$color</span>;</span></span><br><span class="line">    <span class="attribute">border-color</span><span class="value">: <span class="variable">$color</span>;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u6DF7_u5408_28mixin_29" class="article-heading"><a href="#u6DF7_u5408_28mixin_29" class="headerlink" title="混合(mixin)"></a>混合(mixin)<a class="article-anchor" href="#u6DF7_u5408_28mixin_29" aria-hidden="true"></a></h2><p>根据功能定义模块，然后在需要使用的地方通过 <code>@include</code> 调用，避免编码时重复输入代码段</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">// CSS</span></span><br><span class="line"><span class="class">.jdc_1</span> &#123;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span><span class="value">: <span class="number">5px</span>;</span></span><br><span class="line">    <span class="attribute">border-radius</span><span class="value">: <span class="number">5px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_2</span> &#123;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span><span class="value">: <span class="number">10px</span>;</span></span><br><span class="line">    <span class="attribute">border-radius</span><span class="value">: <span class="number">10px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// SCSS</span></span><br><span class="line"><span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> radius</span>(<span class="variable">$radius</span>:<span class="number">5px</span>) &#123;</span></span><br><span class="line">    -webkit-<span class="attribute">border-radius</span><span class="value">: <span class="variable">$radius</span>;</span></span><br><span class="line">    <span class="attribute">border-radius</span><span class="value">: <span class="variable">$radius</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_1</span> &#123;</span><br><span class="line">    <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> radius</span>;</span> <span class="comment">//参数使用默认值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_2</span> &#123;</span><br><span class="line">    <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> radius</span>(<span class="number">10px</span>);</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// CSS</span></span><br><span class="line"><span class="class">.jdc_1</span> &#123;</span><br><span class="line">    <span class="attribute">background</span><span class="value">: <span class="function">url</span>(/img/icon.png) no-repeat -<span class="number">10px</span> <span class="number">0</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_2</span> &#123;</span><br><span class="line">    <span class="attribute">background</span><span class="value">: <span class="function">url</span>(/img/icon.png) no-repeat -<span class="number">20px</span> <span class="number">0</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// SCSS</span></span><br><span class="line"><span class="at_rule">@<span class="keyword">mixin</span><span class="preprocessor"> icon</span>(<span class="variable">$x</span>:<span class="number">0</span>, <span class="variable">$y</span>:<span class="number">0</span>) &#123;</span></span><br><span class="line">    <span class="attribute">background</span><span class="value">: <span class="function">url</span>(/img/icon.png) no-repeat <span class="variable">$x</span>, <span class="variable">$y</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_1</span> &#123;</span><br><span class="line">    <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> icon</span>(-<span class="number">10px</span>,<span class="preprocessor"> 0</span>);</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_2</span> &#123;</span><br><span class="line">    <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> icon</span>(-<span class="number">20px</span>,<span class="preprocessor"> 0</span>);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u5360_u4F4D_u9009_u62E9_u5668__25" class="article-heading"><a href="#u5360_u4F4D_u9009_u62E9_u5668__25" class="headerlink" title="占位选择器 %"></a>占位选择器 %<a class="article-anchor" href="#u5360_u4F4D_u9009_u62E9_u5668__25" aria-hidden="true"></a></h2><p>如果不调用则不会有任何多余的 css 文件，占位选择器以 <code>%</code> 标识定义，通过 <code>@extend</code> 调用</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">//scss</span></span><br><span class="line">%borderbox &#123;</span><br><span class="line">    -webkit-<span class="attribute">box-sizing</span><span class="value">: border-box;</span></span><br><span class="line">    <span class="attribute">box-sizing</span><span class="value">: border-box;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    <span class="at_rule">@<span class="keyword">extend</span> %borderbox;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="extend__u7EE7_u627F" class="article-heading"><a href="#extend__u7EE7_u627F" class="headerlink" title="extend 继承"></a>extend 继承<a class="article-anchor" href="#extend__u7EE7_u627F" aria-hidden="true"></a></h2><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">// CSS</span></span><br><span class="line"><span class="class">.jdc_1</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span><span class="value">: <span class="number">12px</span>;</span></span><br><span class="line">    <span class="attribute">color</span><span class="value">: red;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_2</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span><span class="value">: <span class="number">12px</span>;</span></span><br><span class="line">    <span class="attribute">color</span><span class="value">: red;</span></span><br><span class="line">    <span class="attribute">font-weight</span><span class="value">: bold;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// SCSS</span></span><br><span class="line"><span class="class">.jdc_1</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span><span class="value">: <span class="number">12px</span>;</span></span><br><span class="line">    <span class="attribute">color</span><span class="value">: red;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_2</span> &#123;</span><br><span class="line">    <span class="at_rule">@<span class="keyword">extend</span><span class="preprocessor"> .jdc_1</span>;</span></span><br><span class="line">    <span class="attribute">font-weight</span><span class="value">: bold;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">%font_red &#123;</span><br><span class="line">    <span class="attribute">font-size</span><span class="value">: <span class="number">12px</span>;</span></span><br><span class="line">    <span class="attribute">color</span><span class="value">: red;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_1</span> &#123;</span><br><span class="line">    <span class="at_rule">@<span class="keyword">extend</span> %font_red;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_2</span> &#123;</span><br><span class="line">    <span class="at_rule">@<span class="keyword">extend</span> %font_red;</span></span><br><span class="line">    <span class="attribute">font-weight</span><span class="value">: bold;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for__u5FAA_u73AF" class="article-heading"><a href="#for__u5FAA_u73AF" class="headerlink" title="for 循环"></a>for 循环<a class="article-anchor" href="#for__u5FAA_u73AF" aria-hidden="true"></a></h2><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">// CSS</span></span><br><span class="line"><span class="class">.jdc_1</span> &#123;<span class="attribute">background-position</span><span class="value">: <span class="number">0</span> -<span class="number">20px</span>;</span>&#125;</span><br><span class="line"><span class="class">.jdc_2</span> &#123;<span class="attribute">background-position</span><span class="value">: <span class="number">0</span> -<span class="number">40px</span>;</span>&#125;</span><br><span class="line"><span class="class">.jdc_3</span> &#123;<span class="attribute">background-position</span><span class="value">: <span class="number">0</span> -<span class="number">60px</span>;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// SCSS</span></span><br><span class="line"><span class="at_rule">@<span class="keyword">for</span> <span class="variable">$i</span><span class="preprocessor"> from</span><span class="preprocessor"> 1</span><span class="preprocessor"> through</span><span class="preprocessor"> 3</span> &#123;</span></span><br><span class="line">    <span class="class">.jdc_</span>#&#123;<span class="variable">$i</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">background-position</span><span class="value">: <span class="number">0</span> (-<span class="number">20px</span>) * <span class="variable">$i</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：<code>#{}</code> 是连接符，变量连接使用时需要依赖</p>
+<h2 id="each__u5FAA_u73AF" class="article-heading"><a href="#each__u5FAA_u73AF" class="headerlink" title="each 循环"></a>each 循环<a class="article-anchor" href="#each__u5FAA_u73AF" aria-hidden="true"></a></h2><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">// CSS</span></span><br><span class="line"><span class="class">.jdc_list</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span><span class="value">: <span class="function">url</span>(/img/jdc_list.png);</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_detail</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span><span class="value">: <span class="function">url</span>(/img/jdc_detail.png);</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// SCSS</span></span><br><span class="line"><span class="at_rule">@<span class="keyword">each</span> <span class="variable">$name</span><span class="preprocessor"> in</span><span class="preprocessor"> list</span>,<span class="preprocessor"> detail</span> &#123;</span></span><br><span class="line">    <span class="class">.jdc_</span>#&#123;<span class="variable">$name</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">background-image</span><span class="value">: <span class="function">url</span>(/img/jdc_#&#123;<span class="variable">$name</span>&#125;.png);</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// CSS</span></span><br><span class="line"><span class="class">.jdc_list</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span><span class="value">: <span class="function">url</span>(/img/jdc_list.png);</span></span><br><span class="line">    <span class="attribute">background-color</span><span class="value">: red;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc_detail</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span><span class="value">: <span class="function">url</span>(/img/jdc_detail.png);</span></span><br><span class="line">    <span class="attribute">background-color</span><span class="value">: blue;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// SCSS</span></span><br><span class="line"><span class="at_rule">@<span class="keyword">each</span> <span class="variable">$name</span>, <span class="variable">$color</span><span class="preprocessor"> in</span> (list,<span class="preprocessor"> red</span>), (detail,<span class="preprocessor"> blue</span>) &#123;</span></span><br><span class="line">    <span class="class">.jdc_</span>#&#123;<span class="variable">$name</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">background-image</span><span class="value">: <span class="function">url</span>(/img/jdc_#&#123;<span class="variable">$name</span>&#125;.png);</span></span><br><span class="line">        <span class="attribute">background-color</span><span class="value">: <span class="variable">$color</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="function__u51FD_u6570" class="article-heading"><a href="#function__u51FD_u6570" class="headerlink" title="function 函数"></a>function 函数<a class="article-anchor" href="#function__u51FD_u6570" aria-hidden="true"></a></h2><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="at_rule">@function<span class="preprocessor"> pxToRem</span>(<span class="variable">$px</span>) &#123;</span></span><br><span class="line">    <span class="at_rule">@return <span class="variable">$px</span> /<span class="preprocessor"> 10px</span> *<span class="preprocessor"> 1rem</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span><span class="value">: <span class="function">pxToRem</span>(<span class="number">12px</span>);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u8FD0_u7B97_u89C4_u8303" class="article-heading"><a href="#u8FD0_u7B97_u89C4_u8303" class="headerlink" title="运算规范"></a>运算规范<a class="article-anchor" href="#u8FD0_u7B97_u89C4_u8303" aria-hidden="true"></a></h2><p>运算符之间空出一个空格</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    <span class="attribute">width</span><span class="value">: <span class="number">100px</span> - <span class="number">50px</span>;</span></span><br><span class="line">    <span class="attribute">height</span><span class="value">: <span class="number">30px</span> / <span class="number">5</span>;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意运算单位，单位同时参与运算，所以 10px 不等于 10，乘除运算时需要特别注意</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 正确的运算格式</span></span><br><span class="line"><span class="class">.jdc</span> &#123;</span><br><span class="line">    <span class="attribute">width</span><span class="value">: <span class="number">100px</span> - <span class="number">50px</span>;</span></span><br><span class="line">    <span class="attribute">width</span><span class="value">: <span class="number">100px</span> + <span class="number">50px</span>;</span></span><br><span class="line">    <span class="attribute">width</span><span class="value">: <span class="number">100px</span> * <span class="number">2</span>;</span></span><br><span class="line">    <span class="attribute">width</span><span class="value">: <span class="number">100px</span> / <span class="number">2</span>;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-12-30T08:12:37.000Z" itemprop="dateModified">上次更新：2015-12-30</time>
+                <a href="/guide/docs/css/note.html" class="article-footer-prev" title="注释规范"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="/guide/docs/css/reset.html" class="article-footer-next" title="重置样式"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+
+
+
+            </div>
+          </div>
+          <aside class="article-toc" id="article-toc" role="navigation">
+            <div id="article-toc-inner" class="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ul class="nav toc-nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u8BED_u6CD5_u9009_u7528"><span class="nav-text">语法选用</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SCSS"><span class="nav-text">SCSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sass"><span class="nav-text">Sass</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u56E2_u961F_u7EA6_u5B9A"><span class="nav-text">团队约定</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7F16_u7801_u683C_u5F0F"><span class="nav-text">编码格式</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u56E2_u961F_u7EA6_u5B9A-1"><span class="nav-text">团队约定</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SASS_u6CE8_u91CA_u89C4_u8303"><span class="nav-text">SASS注释规范</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u56E2_u961F_u7EA6_u5B9A-2"><span class="nav-text">团队约定</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5D4C_u5957_u89C4_u8303"><span class="nav-text">嵌套规范</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u9009_u62E9_u5668_u5D4C_u5957"><span class="nav-text">选择器嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u5D4C_u5957"><span class="nav-text">属性嵌套</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u53D8_u91CF"><span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6DF7_u5408_28mixin_29"><span class="nav-text">混合(mixin)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5360_u4F4D_u9009_u62E9_u5668__25"><span class="nav-text">占位选择器 %</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extend__u7EE7_u627F"><span class="nav-text">extend 继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for__u5FAA_u73AF"><span class="nav-text">for 循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#each__u5FAA_u73AF"><span class="nav-text">each 循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#function__u51FD_u6570"><span class="nav-text">function 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8FD0_u7B97_u89C4_u8303"><span class="nav-text">运算规范</span></a></li></ul>
+              <a href="#" id="article-toc-top" class="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation" class="sidebar">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="/guide/docs/index.html" class="sidebar-link">概述</a><strong class="sidebar-title">HTML规范</strong><a href="/guide/docs/html/code.html" class="sidebar-link">代码规范</a><a href="/guide/docs/html/note.html" class="sidebar-link">注释规范</a><a href="/guide/docs/html/template.html" class="sidebar-link">文件模版</a><a href="/guide/docs/html/webapp.html" class="sidebar-link">WebApp Meta</a><strong class="sidebar-title">图片规范</strong><a href="/guide/docs/image/format.html" class="sidebar-link">图片格式</a><a href="/guide/docs/image/size.html" class="sidebar-link">图片大小</a><a href="/guide/docs/image/quality.html" class="sidebar-link">图片质量</a><a href="/guide/docs/image/import.html" class="sidebar-link">图片引入</a><strong class="sidebar-title">CSS规范</strong><a href="/guide/docs/css/code.html" class="sidebar-link">代码规范</a><a href="/guide/docs/css/note.html" class="sidebar-link">注释规范</a><a href="/guide/docs/css/sass.html" class="sidebar-link current">SASS 规范</a><a href="/guide/docs/css/reset.html" class="sidebar-link">重置样式</a><a href="/guide/docs/css/query.html" class="sidebar-link">媒体查询</a><a href="/guide/docs/css/webkit.html" class="sidebar-link">Webkit 属性</a><strong class="sidebar-title">命名规范</strong><a href="/guide/docs/name/dir.html" class="sidebar-link">目录命名</a><a href="/guide/docs/name/image.html" class="sidebar-link">图片命名</a><a href="/guide/docs/name/htmlcss.html" class="sidebar-link">HTML/CSS 命名</a><a href="/guide/docs/name/classname.html" class="sidebar-link">ClassName 命名</a></div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <a href="http://zespia.tw/" target="_blank">凹凸实验室</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/o2team/guide" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <div id="mobile-nav-dimmer" class="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav" class="mobile-nav">
+  <div id="mobile-nav-inner" class="mobile-nav-inner">
+    <ul id="mobile-nav-list" class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/guide/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/guide/news/" class="mobile-nav-link">新闻</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/o2team/guide" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="/guide/docs/index.html" class="mobile-nav-link">概述</a><strong class="mobile-nav-title">HTML规范</strong><a href="/guide/docs/html/code.html" class="mobile-nav-link">代码规范</a><a href="/guide/docs/html/note.html" class="mobile-nav-link">注释规范</a><a href="/guide/docs/html/template.html" class="mobile-nav-link">文件模版</a><a href="/guide/docs/html/webapp.html" class="mobile-nav-link">WebApp Meta</a><strong class="mobile-nav-title">图片规范</strong><a href="/guide/docs/image/format.html" class="mobile-nav-link">图片格式</a><a href="/guide/docs/image/size.html" class="mobile-nav-link">图片大小</a><a href="/guide/docs/image/quality.html" class="mobile-nav-link">图片质量</a><a href="/guide/docs/image/import.html" class="mobile-nav-link">图片引入</a><strong class="mobile-nav-title">CSS规范</strong><a href="/guide/docs/css/code.html" class="mobile-nav-link">代码规范</a><a href="/guide/docs/css/note.html" class="mobile-nav-link">注释规范</a><a href="/guide/docs/css/sass.html" class="mobile-nav-link current">SASS 规范</a><a href="/guide/docs/css/reset.html" class="mobile-nav-link">重置样式</a><a href="/guide/docs/css/query.html" class="mobile-nav-link">媒体查询</a><a href="/guide/docs/css/webkit.html" class="mobile-nav-link">Webkit 属性</a><strong class="mobile-nav-title">命名规范</strong><a href="/guide/docs/name/dir.html" class="mobile-nav-link">目录命名</a><a href="/guide/docs/name/image.html" class="mobile-nav-link">图片命名</a><a href="/guide/docs/name/htmlcss.html" class="mobile-nav-link">HTML/CSS 命名</a><a href="/guide/docs/name/classname.html" class="mobile-nav-link">ClassName 命名</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap" class="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label" class="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="docs/css/sass.html" class="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- build:js js/dist.main.js -->
+<script src="/guide/js/jquery.js" type="text/javascript"></script>
+<script src="/guide/js/hammer.js" type="text/javascript"></script>
+<script src="/guide/assets/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script src="/guide/js/lang_select.js" type="text/javascript"></script>
+<script src="/guide/js/toc.js" type="text/javascript"></script>
+<script src="/guide/js/mobile_nav.js" type="text/javascript"></script>
+<!-- endbuild -->
+
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','nxhXzi1rDss_9_P_6zBa');
+</script>
+
+</div>
+</body>
+</html>

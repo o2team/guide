@@ -4,7 +4,7 @@ title: 注释规范
 > Comments begin with the characters `/*` and end with the characters `*/`. They may occur anywhere outside other tokens, and their contents have no influence on the rendering. Comments may not be nested.
 
 * 注释以字符 `/*` 开始，以字符 `*/` 结束
-* 注释不能被嵌套
+* 注释不能嵌套
 
 ```css
 /*Comment Text*/
