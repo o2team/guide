@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>Webkit属性 | Aotu.io - 前端代码规范</title>
+  <title>移动平台常用私有属性 | Aotu.io - 前端代码规范</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -38,20 +38,28 @@
   <!-- RSS -->
   <link rel="alternative" href="/guide/atom.xml" title="Aotu.io - 前端代码规范" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="待补充">
+  <meta name="description" content="目前两大主流移动平台为 iOS 和 Android，有不少带 -webkit- 前辍的 CSS 私有属性以及一些 iOS only 属性，当中好些属性在日常需求中经常应用到。
+WebKit CSS 属性中的一部分已经被包含在 CSS 规范草案中,并且可能成为最后的推荐标准,但目前仍然是试验性的属性，还有一些属性是不规范的属性,它们没有出现在跟踪规范中。
+-webkit-touch-callout-">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Webkit属性">
+<meta property="og:title" content="移动平台常用私有属性">
 <meta property="og:url" content="http://aotu.io/guide/docs/css/webkit.html">
 <meta property="og:site_name" content="Aotu.io - 前端代码规范">
-<meta property="og:description" content="待补充">
-<meta property="og:updated_time" content="2015-12-24T03:34:46.000Z">
+<meta property="og:description" content="目前两大主流移动平台为 iOS 和 Android，有不少带 -webkit- 前辍的 CSS 私有属性以及一些 iOS only 属性，当中好些属性在日常需求中经常应用到。
+WebKit CSS 属性中的一部分已经被包含在 CSS 规范草案中,并且可能成为最后的推荐标准,但目前仍然是试验性的属性，还有一些属性是不规范的属性,它们没有出现在跟踪规范中。
+-webkit-touch-callout-">
+<meta property="og:image" content="http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-no.png">
+<meta property="og:image" content="http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-yes.png">
+<meta property="og:updated_time" content="2016-01-06T07:37:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Webkit属性">
-<meta name="twitter:description" content="待补充">
+<meta name="twitter:title" content="移动平台常用私有属性">
+<meta name="twitter:description" content="目前两大主流移动平台为 iOS 和 Android，有不少带 -webkit- 前辍的 CSS 私有属性以及一些 iOS only 属性，当中好些属性在日常需求中经常应用到。
+WebKit CSS 属性中的一部分已经被包含在 CSS 规范草案中,并且可能成为最后的推荐标准,但目前仍然是试验性的属性，还有一些属性是不规范的属性,它们没有出现在跟踪规范中。
+-webkit-touch-callout-">
 <meta name="twitter:site" content="o2circle">
 <meta property="fb:admins" content="100000247608790">
   <!-- Swiftype -->
-  <meta class="swiftype" name="title" data-type="string" content="Webkit属性">
+  <meta class="swiftype" name="title" data-type="string" content="移动平台常用私有属性">
   <!-- Baidu Analytics -->
   
 <script>
@@ -118,15 +126,285 @@ var _hmt = _hmt || [];
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Webkit属性</h1>
+                <h1 class="article-title" itemprop="name">移动平台常用私有属性</h1>
                 <a href="https://github.com/o2team/guide/edit/master/source/docs/css/webkit.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
-                <p>待补充</p>
+                <p>目前两大主流移动平台为 <code>iOS</code> 和 <code>Android</code>，有不少带 <code>-webkit-</code> 前辍的 CSS 私有属性以及一些 iOS only 属性，当中好些属性在日常需求中经常应用到。</p>
+<p><code>WebKit</code> CSS 属性中的一部分已经被包含在 CSS 规范草案中,并且可能成为最后的推荐标准,但目前仍然是试验性的属性，还有一些属性是不规范的属性,它们没有出现在跟踪规范中。</p>
+<h2 id="webkit-touch-callout" class="article-heading"><a href="#webkit-touch-callout" class="headerlink" title="-webkit-touch-callout"></a>-webkit-touch-callout<a class="article-anchor" href="#webkit-touch-callout" aria-hidden="true"></a></h2><p><code>-webkit-touch-callout</code> 是一个不规范的属性（<a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html" target="_blank" rel="external">unsupported WebKit property</a>），它没有出现在 CSS 规范草案中。</p>
+<p>当你触摸并按住触摸目标时候，禁止或显示系统默认菜单。在iOS上，当你触摸并按住触摸的目标，比如一个链接，Safari浏览器将显示链接有关的系统默认菜单，这个属性可以让你禁用系统默认菜单。</p>
+<h3 id="u5C5E_u6027_u503C" class="article-heading"><a href="#u5C5E_u6027_u503C" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C" aria-hidden="true"></a></h3><ul>
+<li><code>none</code>：系统默认菜单被禁用</li>
+<li><code>inherit</code>：系统默认菜单不被禁用</li>
+</ul>
+<h3 id="u517C_u5BB9_u6027" class="article-heading"><a href="#u517C_u5BB9_u6027" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027" aria-hidden="true"></a></h3><ul>
+<li>iOS 2.0及更高版本的 Safari 浏览器可用</li>
+<li>Android 尚不明确</li>
+</ul>
+<h2 id="webkit-tap-highlight-color" class="article-heading"><a href="#webkit-tap-highlight-color" class="headerlink" title="-webkit-tap-highlight-color"></a>-webkit-tap-highlight-color<a class="article-anchor" href="#webkit-tap-highlight-color" aria-hidden="true"></a></h2><p><code>-webkit-tap-highlight-color</code> 是一个不规范的属性（<a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html" target="_blank" rel="external">unsupported WebKit property</a>），它没有出现在 CSS 规范草案中。</p>
+<p>在 iOS Safari 上，当用户点击链接或具有 JavaScript 可点击脚本的元素，系统会为这些被点击元素加上一个默认的透明色值，该属性可以覆盖该透明值。</p>
+<h3 id="u5C5E_u6027_u503C-1" class="article-heading"><a href="#u5C5E_u6027_u503C-1" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-1" aria-hidden="true"></a></h3><p>&lt;color&gt;：颜色值</p>
+<h3 id="u517C_u5BB9_u6027-1" class="article-heading"><a href="#u517C_u5BB9_u6027-1" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-1" aria-hidden="true"></a></h3><ul>
+<li>iOS 1.1.1及更高版本的Safari浏览器可用</li>
+<li>大部分安卓手机</li>
+</ul>
+<h2 id="webkit-overflow-scrolling" class="article-heading"><a href="#webkit-overflow-scrolling" class="headerlink" title="-webkit-overflow-scrolling"></a>-webkit-overflow-scrolling<a class="article-anchor" href="#webkit-overflow-scrolling" aria-hidden="true"></a></h2><p>定义在具 <code>overflow:scroll</code> 属性的元素内是否采用原生样式滚动行为</p>
+<h3 id="u5C5E_u6027_u503C-2" class="article-heading"><a href="#u5C5E_u6027_u503C-2" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-2" aria-hidden="true"></a></h3><ul>
+<li><code>auto</code>：默认值，单手滚动，滚动没有惯性效果</li>
+<li><code>touch</code>：原生样式滚动，应用此属性会产生<strong>层叠上下文</strong>（会影响定位参照物的属性，类似 <code>opacity</code>、<code>masks</code>、<code>transforms</code>属性，影响到 <code>position</code> 的效果，甚至影响到 <code>position:fixed</code> 的定位参照物，）</li>
+</ul>
+<h3 id="u517C_u5BB9_u6027-2" class="article-heading"><a href="#u517C_u5BB9_u6027-2" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-2" aria-hidden="true"></a></h3><ul>
+<li>iOS 5.0 及更高版本</li>
+<li>大部分安卓机</li>
+</ul>
+<h2 id="webkit-line-clamp" class="article-heading"><a href="#webkit-line-clamp" class="headerlink" title="-webkit-line-clamp"></a>-webkit-line-clamp<a class="article-anchor" href="#webkit-line-clamp" aria-hidden="true"></a></h2><p><code>-webkit-line-clamp</code> 是一个不规范的属性（<a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html" target="_blank" rel="external">unsupported WebKit property</a>），它没有出现在 CSS 规范草案中。</p>
+<p>限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他外来的WebKit属性。</p>
+<p>常见结合属性：</p>
+<ul>
+<li><code>display: -webkit-box</code>：<strong>必须结合的属性</strong>，将对象作为弹性伸缩盒子模型显示。</li>
+<li><code>-webkit-box-orient</code>：<strong>必须结合的属性</strong>，设置或检索伸缩盒对象的子元素的排列方式。</li>
+<li><code>text-overflow</code>：可以用来多行文本的情况下，用省略号“…”隐藏超出范围的文本。</li>
+</ul>
+<h3 id="u5C5E_u6027_u503C-3" class="article-heading"><a href="#u5C5E_u6027_u503C-3" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-3" aria-hidden="true"></a></h3><p>&lt;number&gt;：块元素显示的文本的行数</p>
+<h3 id="u517C_u5BB9_u6027-3" class="article-heading"><a href="#u517C_u5BB9_u6027-3" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-3" aria-hidden="true"></a></h3><ul>
+<li>iOS</li>
+<li>Andriod</li>
+</ul>
+<h2 id="webkit-appearance" class="article-heading"><a href="#webkit-appearance" class="headerlink" title="-webkit-appearance"></a>-webkit-appearance<a class="article-anchor" href="#webkit-appearance" aria-hidden="true"></a></h2><p><code>-webkit-line-clamp</code> 是一个不规范的属性（<a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html" target="_blank" rel="external">unsupported WebKit property</a>），它没有出现在 CSS 规范草案中。</p>
+<p>改变按钮和其他控件的外观，使其类似于原生控件。</p>
+<h3 id="u5C5E_u6027_u503C-4" class="article-heading"><a href="#u5C5E_u6027_u503C-4" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-4" aria-hidden="true"></a></h3><ul>
+<li><code>none</code>：去除系统默认 appearance 的样式,常用于 iOS 下移除原生样式</li>
+<li><code>button</code>：渲染成 button 的风格</li>
+<li><code>checkbox</code>：渲染成 input checkbox 样式的复选框按钮</li>
+<li><code>radio</code>：渲染成 radio 的风格</li>
+</ul>
+<p>更多属性值参考 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance" target="_blank" rel="external">mozilla：-webkit-appearance 属性</a></p>
+<h3 id="u517C_u5BB9_u6027-4" class="article-heading"><a href="#u517C_u5BB9_u6027-4" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-4" aria-hidden="true"></a></h3><ul>
+<li>iOS 2.0及更高版本的Safari浏览器可用</li>
+<li>Android 尚不明确</li>
+</ul>
+<h2 id="webkit-font-smoothing" class="article-heading"><a href="#webkit-font-smoothing" class="headerlink" title="-webkit-font-smoothing"></a>-webkit-font-smoothing<a class="article-anchor" href="#webkit-font-smoothing" aria-hidden="true"></a></h2><p>字体平滑,该属性定义文本的平滑属性，但要<strong>注意以下说明：</strong></p>
+<blockquote>
+<p>非标准属性，<strong>不建议用于网页上</strong>，这个属性不能保证所有用户都能看到相同效果，这会使网站的字体渲染造成不一致，而此属性的渲染行为日后也有可能会改变</p>
+</blockquote>
+<h3 id="u5C5E_u6027_u503C-5" class="article-heading"><a href="#u5C5E_u6027_u503C-5" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-5" aria-hidden="true"></a></h3><ul>
+<li><code>none</code>：去掉字体平滑效果，使字体带锯齿</li>
+<li><code>antialiased</code>：使字体在像素级别更平滑更轻细</li>
+<li><code>subpixel-antialiased</code>：在多数非 Retina 显示设备中字体将会更锐利。</li>
+</ul>
+<p><strong>注意：以上属性在 Retina 设备上会有明显的效果，在非 Retina 设备上看不出差异</strong></p>
+<h3 id="u517C_u5BB9_u6027-5" class="article-heading"><a href="#u517C_u5BB9_u6027-5" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-5" aria-hidden="true"></a></h3><ul>
+<li>部分高清设备，如 Retina Mac</li>
+</ul>
+<h2 id="webkit-backface-visibility" class="article-heading"><a href="#webkit-backface-visibility" class="headerlink" title="-webkit-backface-visibility"></a>-webkit-backface-visibility<a class="article-anchor" href="#webkit-backface-visibility" aria-hidden="true"></a></h2><p><code>backface-visibility</code> 在 <a href="http://www.w3.org/TR/css3-transforms/#backface-visibility-property" target="_blank" rel="external">W3文档</a> 有定义描述</p>
+<p>定义转换元素的背面是否显示</p>
+<h3 id="u5C5E_u6027_u503C-6" class="article-heading"><a href="#u5C5E_u6027_u503C-6" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-6" aria-hidden="true"></a></h3><ul>
+<li><code>visible</code>：显示（默认值）</li>
+<li><code>hidden</code>：隐藏</li>
+</ul>
+<h3 id="u517C_u5BB9_u6027-6" class="article-heading"><a href="#u517C_u5BB9_u6027-6" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-6" aria-hidden="true"></a></h3><ul>
+<li>iOS 2.0 及更高版本的 Safari 浏览器可用</li>
+<li>大部分 Android</li>
+</ul>
+<h2 id="webkit-user-drag" class="article-heading"><a href="#webkit-user-drag" class="headerlink" title="-webkit-user-drag"></a>-webkit-user-drag<a class="article-anchor" href="#webkit-user-drag" aria-hidden="true"></a></h2><p>设置整个元素而非它的内容可拖动，对应于标签属性 draggable，其中图片和链接默认为可拖动（draggable=”true”），其他元素默认为不可拖动（draggable=”false”）</p>
+<h3 id="u5C5E_u6027_u503C-7" class="article-heading"><a href="#u5C5E_u6027_u503C-7" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-7" aria-hidden="true"></a></h3><ul>
+<li><code>auto</code>：使用默认的拖动行为。图片和链接默认为可拖动，其他元素默认为不可拖动。</li>
+<li><code>element</code>：整个元素而非它的内容可拖动。</li>
+<li><code>none</code>：元素不能被拖动。但可通过复制选中后拖动。</li>
+<li><code>inherit</code>：父级继承值</li>
+</ul>
+<h3 id="u517C_u5BB9_u6027-7" class="article-heading"><a href="#u517C_u5BB9_u6027-7" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-7" aria-hidden="true"></a></h3><ul>
+<li>Safari 3.0 及更高版本</li>
+<li>大部分安卓手机</li>
+</ul>
+<h2 id="webkit-user-select" class="article-heading"><a href="#webkit-user-select" class="headerlink" title="-webkit-user-select"></a>-webkit-user-select<a class="article-anchor" href="#webkit-user-select" aria-hidden="true"></a></h2><p>定义用户是否能选中元素内容</p>
+<h3 id="u5C5E_u6027_u503C-8" class="article-heading"><a href="#u5C5E_u6027_u503C-8" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-8" aria-hidden="true"></a></h3><ul>
+<li><code>auto</code>：可选中元素内容</li>
+<li><code>none</code>：不能选中任何内容</li>
+<li><code>text</code>：可选中元素内的文本</li>
+</ul>
+<h3 id="u517C_u5BB9_u6027-8" class="article-heading"><a href="#u517C_u5BB9_u6027-8" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-8" aria-hidden="true"></a></h3><ul>
+<li>iOS 3.0 及更高版本的 Safari</li>
+<li>大部分安卓手机</li>
+</ul>
+<h2 id="webkit-user-modify" class="article-heading"><a href="#webkit-user-modify" class="headerlink" title="-webkit-user-modify"></a>-webkit-user-modify<a class="article-anchor" href="#webkit-user-modify" aria-hidden="true"></a></h2><p>定义用户是否用编辑元素内容</p>
+<h3 id="u5C5E_u6027_u503C-9" class="article-heading"><a href="#u5C5E_u6027_u503C-9" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-9" aria-hidden="true"></a></h3><ul>
+<li><code>read-only</code>：只读</li>
+<li><code>read-write</code>：可读可写，粘贴内容会保留富文本格式（ Android 机不保留富文本格式 ）</li>
+<li><code>read-write-plaintext-only</code>：可读可写，粘贴内容所有富文本格式都会丢失</li>
+</ul>
+<p><strong>注意：使用这个属性的时候，请不要出现 <code>-webkit-user-select: none</code>，文本无法选中的情况下，在 Safari 该属性不生效，不过在 Chrome 依然生效</strong></p>
+<h3 id="u517C_u5BB9_u6027-9" class="article-heading"><a href="#u517C_u5BB9_u6027-9" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-9" aria-hidden="true"></a></h3><ul>
+<li>iOS 5.0 及更高版本</li>
+<li>Safari 3.0 及更高版本</li>
+<li>大部分安卓手机</li>
+</ul>
+<h2 id="webkit-text-stroke" class="article-heading"><a href="#webkit-text-stroke" class="headerlink" title="-webkit-text-stroke"></a>-webkit-text-stroke<a class="article-anchor" href="#webkit-text-stroke" aria-hidden="true"></a></h2><p>定义文本描边，可以设计描边的宽和颜色，一般与文本填充属性 <code>-webkit-text-fill-color</code> 共用。</p>
+<h3 id="u5C5E_u6027_u503C-10" class="article-heading"><a href="#u5C5E_u6027_u503C-10" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-10" aria-hidden="true"></a></h3><ul>
+<li>&lt;length&gt;：长度单位</li>
+<li>&lt;color&gt;：颜色值</li>
+</ul>
+<h3 id="u517C_u5BB9_u6027-10" class="article-heading"><a href="#u517C_u5BB9_u6027-10" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-10" aria-hidden="true"></a></h3><ul>
+<li>iOS 2.0 及更高版本</li>
+<li>Safari 3.0 及更高版本</li>
+<li>安卓尚不明确</li>
+</ul>
+<h2 id="webkit-text-fill-color" class="article-heading"><a href="#webkit-text-fill-color" class="headerlink" title="-webkit-text-fill-color"></a>-webkit-text-fill-color<a class="article-anchor" href="#webkit-text-fill-color" aria-hidden="true"></a></h2><p>定义文本填充，一般与文本描边属性 <code>webkit-text-stroke</code> 共用。</p>
+<h3 id="u5C5E_u6027_u503C-11" class="article-heading"><a href="#u5C5E_u6027_u503C-11" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-11" aria-hidden="true"></a></h3><ul>
+<li>&lt;color&gt;：颜色值</li>
+<li><code>currentcolor</code>：元素 <code>color</code> 属性值</li>
+<li><code>-webkit-activelink</code>：链接被点击时系统的默认颜色</li>
+</ul>
+<p>更多属性值参考：<a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html" target="_blank" rel="external">Safari CSS Reference -webkit-text-fill-color</a></p>
+<h3 id="u517C_u5BB9_u6027-11" class="article-heading"><a href="#u517C_u5BB9_u6027-11" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-11" aria-hidden="true"></a></h3><ul>
+<li>iOS 2.0 及更高版本</li>
+<li>Safari 3.0 及更高版本</li>
+<li>安卓尚不明确</li>
+</ul>
+<h2 id="webkit-text-size-adjust" class="article-heading"><a href="#webkit-text-size-adjust" class="headerlink" title="-webkit-text-size-adjust"></a>-webkit-text-size-adjust<a class="article-anchor" href="#webkit-text-size-adjust" aria-hidden="true"></a></h2><p>定义 iOS Safari 网页文本大小调整属性</p>
+<h3 id="u5C5E_u6027_u503C-12" class="article-heading"><a href="#u5C5E_u6027_u503C-12" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-12" aria-hidden="true"></a></h3><ul>
+<li>&lt;percentage&gt;：百分比值，字体显示调整值</li>
+<li><code>aotu</code>：字体自动调整</li>
+<li><code>none</code>：字体不能自动调整</li>
+</ul>
+<h3 id="u517C_u5BB9_u6027-12" class="article-heading"><a href="#u517C_u5BB9_u6027-12" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-12" aria-hidden="true"></a></h3><ul>
+<li>iOS 1.0 及更高版本</li>
+<li>Safari on iOS only</li>
+<li>安卓尚不明确</li>
+</ul>
+<h2 id="webkit-marquee" class="article-heading"><a href="#webkit-marquee" class="headerlink" title="-webkit-marquee"></a>-webkit-marquee<a class="article-anchor" href="#webkit-marquee" aria-hidden="true"></a></h2><p>定义滚动文本内容属性（缩写属性，类似<code>margin</code>）。</p>
+<h3 id="u4F7F_u7528_u8BED_u6CD5" class="article-heading"><a href="#u4F7F_u7528_u8BED_u6CD5" class="headerlink" title="使用语法"></a>使用语法<a class="article-anchor" href="#u4F7F_u7528_u8BED_u6CD5" aria-hidden="true"></a></h3><p><code>-webkit-marquee: direction increment repetition style speed</code></p>
+<h3 id="u5C5E_u6027_u503C-13" class="article-heading"><a href="#u5C5E_u6027_u503C-13" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-13" aria-hidden="true"></a></h3><ul>
+<li>&lt;direction&gt;：滚动方向<ul>
+<li><code>ahead</code>：从下到上滚动</li>
+<li><code>auto</code>：默认滚动方向</li>
+<li><code>backwards</code>：从右到左滚动</li>
+<li><code>down</code>：从上到下滚动</li>
+<li><code>forwards</code>：从左到右滚动</li>
+<li><code>left</code>：从右到左滚动</li>
+<li><code>reverse</code>：从上到下滚动</li>
+<li><code>right</code>：从左到右滚动</li>
+<li><code>up</code>：从下到上滚动</li>
+</ul>
+</li>
+<li>&lt;increment&gt;：每次移动的距离<ul>
+<li>[&lt;percentage&gt; | &lt;length&gt;]</li>
+<li><code>large</code>：距离常量</li>
+<li><code>medium</code>：距离常量</li>
+<li><code>small</code>：距离常量</li>
+</ul>
+</li>
+<li>&lt;repetition&gt;：文字滚动的重复次数<ul>
+<li>非负整数</li>
+<li><code>infinite</code>：无限次</li>
+</ul>
+</li>
+<li>&lt;style&gt;：文字滚动的方式<ul>
+<li><code>alternate</code>：重复滚动</li>
+<li><code>none</code>：停止滚动</li>
+<li><code>scroll</code>：在定义方向上滚动</li>
+<li><code>slide</code>：定义方向上滚动，内容显示完毕或者内容滚动到滚动区域另一端边框时候都会停止下来</li>
+</ul>
+</li>
+<li>&lt;speed&gt;：滚动或滑动的速度<ul>
+<li>非负整数（毫秒单位）或带时间单位的非负整数</li>
+<li><code>fast</code></li>
+<li><code>normal</code></li>
+<li><code>slow</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="u517C_u5BB9_u6027-13" class="article-heading"><a href="#u517C_u5BB9_u6027-13" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-13" aria-hidden="true"></a></h3><ul>
+<li>iOS 1.0 及更高版本</li>
+<li>Safari 3.0 及更高版本</li>
+<li>大部分安卓手机</li>
+</ul>
+<h2 id="webkit-filter" class="article-heading"><a href="#webkit-filter" class="headerlink" title="-webkit-filter"></a>-webkit-filter<a class="article-anchor" href="#webkit-filter" aria-hidden="true"></a></h2><p>滤镜属性可以让元素本身内容（文本、背景等）及其子元素加上滤镜效果</p>
+<h3 id="u5C5E_u6027_u503C-14" class="article-heading"><a href="#u5C5E_u6027_u503C-14" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-14" aria-hidden="true"></a></h3><ul>
+<li><p><code>blur(&lt;length&gt;)</code>：模糊，原始效果值为 <code>0px</code>，不接受负值</p>
+</li>
+<li><p><code>brightness([ &lt;number&gt; | &lt;percentage&gt; ])</code>：亮度，原始效果值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>contrast([ &lt;number&gt; | &lt;percentage&gt; ])</code>：对比度，原始效果值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>drop-shadow( &lt;length&gt;{2,4} &lt;color&gt;?)</code>：投影，原始效果值为所有长度值为 <code>0</code>，长度值至少2个，最多4个，</p>
+</li>
+<li><p><code>grayscale([ &lt;number&gt; | &lt;percentage&gt; ] )</code>：灰度，原始效果值为 <code>0</code>，最大值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>hue-rotate( &lt;angle&gt;)</code>：相位，原始效果值为 <code>0deg</code></p>
+</li>
+<li><p><code>invert( [ &lt;number&gt; | &lt;percentage&gt; ])</code>：反相，原始效果值为 <code>0</code>，最大值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>opacity([ &lt;number&gt; | &lt;percentage&gt; ] )</code>：透明度，原始效果值为 <code>1</code>，最大值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>saturate([ &lt;number&gt; | &lt;percentage&gt; ])</code>：饱和度，原始效果值为 <code>1</code>，不接受负值</p>
+</li>
+<li><p><code>sepia([ &lt;number&gt; | &lt;percentage&gt; ])</code>：乌贼墨，原始效果值为 <code>0</code>，最大值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+</ul>
+<p>关于  <code>-webkit-filter</code> 与 <code>-webkit-backdrop-filter</code> 的属性对比可以参考：</p>
+<p><a href="http://aotu.io/notes/2015/12/23/new-safari-9/">What’s New in Safari 9.0 - backdrop-filter </a></p>
+<h3 id="u517C_u5BB9_u6027-14" class="article-heading"><a href="#u517C_u5BB9_u6027-14" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-14" aria-hidden="true"></a></h3><ul>
+<li>iOS 8.0 及更高版本</li>
+<li>Safari 8.0 及更高版本</li>
+<li>Android 4.4 及更高版本</li>
+</ul>
+<h2 id="webkit-backdrop-filter" class="article-heading"><a href="#webkit-backdrop-filter" class="headerlink" title="-webkit-backdrop-filter"></a>-webkit-backdrop-filter<a class="article-anchor" href="#webkit-backdrop-filter" aria-hidden="true"></a></h2><p>背景滤镜属性可以让元素的背景或元素层级以下的元素加上滤镜效果</p>
+<h3 id="u5C5E_u6027_u503C-15" class="article-heading"><a href="#u5C5E_u6027_u503C-15" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-15" aria-hidden="true"></a></h3><ul>
+<li><p><code>blur(&lt;length&gt;)</code>：模糊，原始效果值为 <code>0px</code>，不接受负值</p>
+</li>
+<li><p><code>brightness([ &lt;number&gt; | &lt;percentage&gt; ])</code>：亮度，原始效果值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>contrast([ &lt;number&gt; | &lt;percentage&gt; ])</code>：对比度，原始效果值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>drop-shadow( &lt;length&gt;{2,3} &lt;color&gt;?)</code>：投影，原始效果值为所有长度值为 <code>0</code>，长度值至少2个，最多3个，<strong>注意：不支持投影扩展值和混合投影</strong></p>
+</li>
+<li><p><code>grayscale([ &lt;number&gt; | &lt;percentage&gt; ] )</code>：灰度，原始效果值为 <code>0</code>，最大值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>hue-rotate( &lt;angle&gt;)</code>：相位，原始效果值为 <code>0deg</code></p>
+</li>
+<li><p><code>invert( [ &lt;number&gt; | &lt;percentage&gt; ])</code>：反相，原始效果值为 <code>0</code>，最大值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>opacity([ &lt;number&gt; | &lt;percentage&gt; ] )</code>：透明度，原始效果值为 <code>1</code>，最大值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+<li><p><code>saturate([ &lt;number&gt; | &lt;percentage&gt; ])</code>：饱和度，原始效果值为 <code>1</code>，不接受负值</p>
+</li>
+<li><p><code>sepia([ &lt;number&gt; | &lt;percentage&gt; ])</code>：乌贼墨，原始效果值为 <code>0</code>，最大值为 <code>1</code> 或 <code>100%</code>，不接受负值</p>
+</li>
+</ul>
+<p>关于 <code>-webkit-filter</code> 与 <code>-webkit-backdrop-filter</code> 的属性对比可以参考：</p>
+<p><a href="http://aotu.io/notes/2015/12/23/new-safari-9/">What’s New in Safari 9.0</a></p>
+<h3 id="u517C_u5BB9_u6027-15" class="article-heading"><a href="#u517C_u5BB9_u6027-15" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-15" aria-hidden="true"></a></h3><ul>
+<li>iOS 9.0 及更高版本</li>
+<li>Safari 9.0 及更高版本</li>
+<li>安卓尚未明确</li>
+</ul>
+<h2 id="apple-system" class="article-heading"><a href="#apple-system" class="headerlink" title="-apple-system"></a>-apple-system<a class="article-anchor" href="#apple-system" aria-hidden="true"></a></h2><p>苹果操作系统会从两种不同外观和大小的字体进行自动转换去调节系统新字体 “San Francisco”，可以通过 CSS 规则</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">font-family</span>: <span class="tag">-apple-system</span>, <span class="tag">sans-serif</span>;</span><br></pre></td></tr></table></figure>
+<p>让系统智能选择适配操作系统的字体。</p>
+<p>可以看一下下面两张在系统 OS X 10.11.1 下的对比图：</p>
+<p>没有添加 <code>-apple-system</code> 属性值：</p>
+<p><img src="http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-no.png" alt="image"></p>
+<p>添加了 <code>-apple-system</code> 属性值：</p>
+<p><img src="http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-yes.png" alt="image"> </p>
+<p>可以看到添加了 <code>-apple-system</code>，字体变得更圆润锐利</p>
+<p>关于 <code>-apple-system</code> 更详细的介绍可以参考：</p>
+<p><a href="http://aotu.io/notes/2015/12/23/new-safari-9/">What’s New in Safari 9.0</a></p>
+<h3 id="u517C_u5BB9_u6027-16" class="article-heading"><a href="#u517C_u5BB9_u6027-16" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-16" aria-hidden="true"></a></h3><ul>
+<li>iOS 9.0 及更高版本</li>
+<li>Safari 9.0 及更高版本</li>
+<li>iOS / OS X only</li>
+</ul>
+<h2 id="u66F4_u591A" class="article-heading"><a href="#u66F4_u591A" class="headerlink" title="更多"></a>更多<a class="article-anchor" href="#u66F4_u591A" aria-hidden="true"></a></h2><p>更多 <code>-webkit-</code> CSS 属性介绍请参考：</p>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference/Webkit_Extensions" target="_blank" rel="external">MDN文档 - Webkit Extensions </a></li>
+<li><a href="http://ued.ctrip.com/webkitcss/" target="_blank" rel="external">携程 UED - webkitcss</a></li>
+</ul>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-12-24T03:34:46.000Z" itemprop="dateModified">上次更新：2015-12-24</time>
+                <time class="article-footer-updated" datetime="2016-01-06T07:37:52.000Z" itemprop="dateModified">上次更新：2016-01-06</time>
                 <a href="/guide/docs/css/query.html" class="article-footer-prev" title="媒体查询"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="/guide/docs/name/dir.html" class="article-footer-next" title="目录命名"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -138,7 +416,7 @@ var _hmt = _hmt || [];
           <aside class="article-toc" id="article-toc" role="navigation">
             <div id="article-toc-inner" class="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              
+              <ul class="nav toc-nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-touch-callout"><span class="nav-text">-webkit-touch-callout</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-tap-highlight-color"><span class="nav-text">-webkit-tap-highlight-color</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-1"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-1"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-overflow-scrolling"><span class="nav-text">-webkit-overflow-scrolling</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-2"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-2"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-line-clamp"><span class="nav-text">-webkit-line-clamp</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-3"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-3"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-appearance"><span class="nav-text">-webkit-appearance</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-4"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-4"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-font-smoothing"><span class="nav-text">-webkit-font-smoothing</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-5"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-5"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-backface-visibility"><span class="nav-text">-webkit-backface-visibility</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-6"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-6"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-user-drag"><span class="nav-text">-webkit-user-drag</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-7"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-7"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-user-select"><span class="nav-text">-webkit-user-select</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-8"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-8"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-user-modify"><span class="nav-text">-webkit-user-modify</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-9"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-9"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-text-stroke"><span class="nav-text">-webkit-text-stroke</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-10"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-10"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-text-fill-color"><span class="nav-text">-webkit-text-fill-color</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-11"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-11"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-text-size-adjust"><span class="nav-text">-webkit-text-size-adjust</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-12"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-12"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-marquee"><span class="nav-text">-webkit-marquee</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F7F_u7528_u8BED_u6CD5"><span class="nav-text">使用语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-13"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-13"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-filter"><span class="nav-text">-webkit-filter</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-14"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-14"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-backdrop-filter"><span class="nav-text">-webkit-backdrop-filter</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-15"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-15"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apple-system"><span class="nav-text">-apple-system</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-16"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u66F4_u591A"><span class="nav-text">更多</span></a></li></ul>
               <a href="#" id="article-toc-top" class="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -155,7 +433,7 @@ var _hmt = _hmt || [];
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2015 <a href="http://zespia.tw/" target="_blank">凹凸实验室</a><br>
+      &copy; 2016 <a href="http://zespia.tw/" target="_blank">凹凸实验室</a><br>
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
     </div>
     <div id="footer-links">
