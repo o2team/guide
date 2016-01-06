@@ -3,3 +3,5 @@
 node_modules
 .gitignore
 db.json
+public
+
