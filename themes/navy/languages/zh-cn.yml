@@ -39,7 +39,7 @@ sidebar:
     css_sass: SASS 规范
     css_reset: 重置样式
     css_query: 媒体查询
-    css_webkit: Webkit 属性
+    css_webkit: 常用私有属性
     name: 命名规范
     name_dir: 目录命名
     name_htmlcss: HTML/CSS 命名

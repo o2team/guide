@@ -1,2 +1,7 @@
 .DS_Store
+.deploy_git
 node_modules
+.gitignore
+db.json
+public
+
