@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>移动平台常用私有属性 | Aotu.io - 前端代码规范</title>
+  <title>移动端常用私有属性 | Aotu.io - 前端代码规范</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -42,24 +42,22 @@
 WebKit CSS 属性中的一部分已经被包含在 CSS 规范草案中,并且可能成为最后的推荐标准,但目前仍然是试验性的属性，还有一些属性是不规范的属性,它们没有出现在跟踪规范中。
 -webkit-touch-callout-">
 <meta property="og:type" content="website">
-<meta property="og:title" content="移动平台常用私有属性">
+<meta property="og:title" content="移动端常用私有属性">
 <meta property="og:url" content="http://aotu.io/guide/docs/css/webkit.html">
 <meta property="og:site_name" content="Aotu.io - 前端代码规范">
 <meta property="og:description" content="目前两大主流移动平台为 iOS 和 Android，有不少带 -webkit- 前辍的 CSS 私有属性以及一些 iOS only 属性，当中好些属性在日常需求中经常应用到。
 WebKit CSS 属性中的一部分已经被包含在 CSS 规范草案中,并且可能成为最后的推荐标准,但目前仍然是试验性的属性，还有一些属性是不规范的属性,它们没有出现在跟踪规范中。
 -webkit-touch-callout-">
-<meta property="og:image" content="http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-no.png">
-<meta property="og:image" content="http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-yes.png">
-<meta property="og:updated_time" content="2016-01-06T07:37:52.000Z">
+<meta property="og:updated_time" content="2016-01-07T08:25:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="移动平台常用私有属性">
+<meta name="twitter:title" content="移动端常用私有属性">
 <meta name="twitter:description" content="目前两大主流移动平台为 iOS 和 Android，有不少带 -webkit- 前辍的 CSS 私有属性以及一些 iOS only 属性，当中好些属性在日常需求中经常应用到。
 WebKit CSS 属性中的一部分已经被包含在 CSS 规范草案中,并且可能成为最后的推荐标准,但目前仍然是试验性的属性，还有一些属性是不规范的属性,它们没有出现在跟踪规范中。
 -webkit-touch-callout-">
 <meta name="twitter:site" content="o2circle">
 <meta property="fb:admins" content="100000247608790">
   <!-- Swiftype -->
-  <meta class="swiftype" name="title" data-type="string" content="移动平台常用私有属性">
+  <meta class="swiftype" name="title" data-type="string" content="移动端常用私有属性">
   <!-- Baidu Analytics -->
   
 <script>
@@ -126,7 +124,7 @@ var _hmt = _hmt || [];
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">移动平台常用私有属性</h1>
+                <h1 class="article-title" itemprop="name">移动端常用私有属性</h1>
                 <a href="https://github.com/o2team/guide/edit/master/source/docs/css/webkit.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
@@ -152,7 +150,7 @@ var _hmt = _hmt || [];
 <h2 id="webkit-overflow-scrolling" class="article-heading"><a href="#webkit-overflow-scrolling" class="headerlink" title="-webkit-overflow-scrolling"></a>-webkit-overflow-scrolling<a class="article-anchor" href="#webkit-overflow-scrolling" aria-hidden="true"></a></h2><p>定义在具 <code>overflow:scroll</code> 属性的元素内是否采用原生样式滚动行为</p>
 <h3 id="u5C5E_u6027_u503C-2" class="article-heading"><a href="#u5C5E_u6027_u503C-2" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-2" aria-hidden="true"></a></h3><ul>
 <li><code>auto</code>：默认值，单手滚动，滚动没有惯性效果</li>
-<li><code>touch</code>：原生样式滚动，应用此属性会产生<strong>层叠上下文</strong>（会影响定位参照物的属性，类似 <code>opacity</code>、<code>masks</code>、<code>transforms</code>属性，影响到 <code>position</code> 的效果，甚至影响到 <code>position:fixed</code> 的定位参照物，）</li>
+<li><code>touch</code>：原生样式滚动，应用此属性值会产生<strong>层叠上下文</strong>（会影响定位参照物的属性，类似 <code>opacity</code>、<code>masks</code>、<code>transforms</code>属性，影响到 <code>position</code> 的效果，甚至影响到 <code>position:fixed</code> 的定位参照物，）</li>
 </ul>
 <h3 id="u517C_u5BB9_u6027-2" class="article-heading"><a href="#u517C_u5BB9_u6027-2" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-2" aria-hidden="true"></a></h3><ul>
 <li>iOS 5.0 及更高版本</li>
@@ -178,6 +176,7 @@ var _hmt = _hmt || [];
 <li><code>button</code>：渲染成 button 的风格</li>
 <li><code>checkbox</code>：渲染成 input checkbox 样式的复选框按钮</li>
 <li><code>radio</code>：渲染成 radio 的风格</li>
+<li>…</li>
 </ul>
 <p>更多属性值参考 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance" target="_blank" rel="external">mozilla：-webkit-appearance 属性</a></p>
 <h3 id="u517C_u5BB9_u6027-4" class="article-heading"><a href="#u517C_u5BB9_u6027-4" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-4" aria-hidden="true"></a></h3><ul>
@@ -207,16 +206,73 @@ var _hmt = _hmt || [];
 <li>iOS 2.0 及更高版本的 Safari 浏览器可用</li>
 <li>大部分 Android</li>
 </ul>
-<h2 id="webkit-user-drag" class="article-heading"><a href="#webkit-user-drag" class="headerlink" title="-webkit-user-drag"></a>-webkit-user-drag<a class="article-anchor" href="#webkit-user-drag" aria-hidden="true"></a></h2><p>设置整个元素而非它的内容可拖动，对应于标签属性 draggable，其中图片和链接默认为可拖动（draggable=”true”），其他元素默认为不可拖动（draggable=”false”）</p>
+<h2 id="webkit-mask" class="article-heading"><a href="#webkit-mask" class="headerlink" title="-webkit-mask"></a>-webkit-mask<a class="article-anchor" href="#webkit-mask" aria-hidden="true"></a></h2><p>定义多样的蒙板效果属性（缩写属性，类似 <code>margin</code>）</p>
+<h3 id="u4F7F_u7528_u8BED_u6CD5" class="article-heading"><a href="#u4F7F_u7528_u8BED_u6CD5" class="headerlink" title="使用语法"></a>使用语法<a class="article-anchor" href="#u4F7F_u7528_u8BED_u6CD5" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#60;mask-image&#62; [&#60;mask-repeat&#62; || &#60;mask-attachment&#62; || &#60;mask-position&#62; || &#60;mask-origin&#62; || &#60;mask-clip&#62; || &#60;mask-composite&#62;]*&#10;where &#10;&#60;mask-position&#62; = [ &#60;percentage&#62; | &#60;length&#62; | left | center | right ] [ &#60;percentage&#62; | &#60;length&#62; | top  | center | bottom ]?</span><br></pre></td></tr></table></figure>
+<p>默认值：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">-webkit-mask</span>: <span class="tag">none</span> <span class="tag">repeat</span> <span class="tag">scroll</span> 0% 0% <span class="tag">padding</span> <span class="tag">border</span> <span class="tag">add</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="u5C5E_u6027_u503C-7" class="article-heading"><a href="#u5C5E_u6027_u503C-7" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-7" aria-hidden="true"></a></h3><ul>
-<li><code>auto</code>：使用默认的拖动行为。图片和链接默认为可拖动，其他元素默认为不可拖动。</li>
-<li><code>element</code>：整个元素而非它的内容可拖动。</li>
-<li><code>none</code>：元素不能被拖动。但可通过复制选中后拖动。</li>
-<li><code>inherit</code>：父级继承值</li>
+<li><p>&lt;mask-image&gt;：为元素设置蒙板图片，蒙板图片会根据图片的透明区域对元素可视部分进行裁剪</p>
+<ul>
+<li>&lt;uri&gt;：图片链接作为蒙板图片</li>
+<li>&lt;gradient&gt;：渐变函数 <code>-webkit-gradient</code> 作为蒙板图片</li>
+<li><code>none</code>：去掉蒙板图片</li>
 </ul>
+</li>
+<li><p>&lt;mask-repeat&gt;：定义蒙板图片是否平铺或平铺的方式</p>
+<ul>
+<li><code>repeat</code>：默认值，水平和垂直方向平铺</li>
+<li><code>repeat-x</code>：水平方向平铺</li>
+<li><code>repeat-y</code>：垂直方向平铺</li>
+<li><code>no-repeat</code>：不平铺</li>
+</ul>
+</li>
+<li><p>&lt;mask-attachment&gt;：如果 <code>-webkit-mask-image</code> 属性有设置，<code>attachment</code> 决定该图片是否相对视窗固定或随着其容器滚动</p>
+<ul>
+<li><code>scroll</code>：默认值，随容器滚动</li>
+<li><code>fixed</code>：相地视窗固定</li>
+</ul>
+</li>
+<li><p>&lt;mask-position&gt;：定义蒙板图片的初始位置，书写格式类似 <code>background-position</code>—-<code>&lt;mask-position&gt;[, &lt;mask-position&gt;]*</code></p>
+<ul>
+<li>&lt;percentage&gt;</li>
+<li>&lt;length&gt;</li>
+<li><code>left</code></li>
+<li><code>right</code></li>
+<li><code>center</code></li>
+</ul>
+</li>
+<li><p>&lt;mask-origin&gt;：定义蒙板图片定位相对起点，与 <code>webkit-mask-position</code> 属性相关。当 <code>-webkit-mask-attachment:fixed</code> 的时候，该属性不生效。</p>
+<ul>
+<li><code>padding</code>：默认值，蒙板定位相对边距</li>
+<li><code>border</code>：蒙板定位相对边框</li>
+<li><code>content</code>：蒙板定位相对元素盒子内容</li>
+</ul>
+</li>
+<li><p>&lt;mask-clip&gt;：如果 <code>-webkit-mask-image</code> 属性有设置，<code>-webkit-mask-clip</code> 将定义蒙板图片的裁剪区域</p>
+<ul>
+<li><code>border</code>：默认值，蒙板图片延伸到容器的边框</li>
+<li><code>padding</code>：蒙板图片延伸到容器的边距</li>
+<li><code>content</code>：蒙板图片裁剪到元素盒子内容范围</li>
+<li><code>text</code>：蒙板图片裁剪到元素文本范围</li>
+</ul>
+</li>
+<li><p>&lt;mask-composite&gt;：定义蒙板图片重合的裁剪显示方式</p>
+<ul>
+<li><code>add</code>：默认值，图片重合不裁剪</li>
+<li><code>subtract</code>：去掉层级低的图形以及图片重合部分图形，只留层级高非重合部分图形</li>
+<li><code>intersect</code>：只留重合部分图形</li>
+<li><code>exclude</code>：只去掉重合部分图形</li>
+</ul>
+</li>
+</ul>
+<p>有关属性更详细描述请参考：</p>
+<p><a href="http://www.w3.org/TR/css-masking/" target="_blank" rel="external">w3 - css-masking</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-mask" target="_blank" rel="external">MDN - -webkit-mask</a></p>
+<p><a href="http://ued.ctrip.com/webkitcss/" target="_blank" rel="external">携程 UED - -webkit-mask</a></p>
 <h3 id="u517C_u5BB9_u6027-7" class="article-heading"><a href="#u517C_u5BB9_u6027-7" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-7" aria-hidden="true"></a></h3><ul>
-<li>Safari 3.0 及更高版本</li>
-<li>大部分安卓手机</li>
+<li>Safari 4.0 及更高版本</li>
+<li>iOS 4.0 及更高版本</li>
+<li>Android 2.1 及更高版本</li>
 </ul>
 <h2 id="webkit-user-select" class="article-heading"><a href="#webkit-user-select" class="headerlink" title="-webkit-user-select"></a>-webkit-user-select<a class="article-anchor" href="#webkit-user-select" aria-hidden="true"></a></h2><p>定义用户是否能选中元素内容</p>
 <h3 id="u5C5E_u6027_u503C-8" class="article-heading"><a href="#u5C5E_u6027_u503C-8" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-8" aria-hidden="true"></a></h3><ul>
@@ -250,7 +306,7 @@ var _hmt = _hmt || [];
 <li>Safari 3.0 及更高版本</li>
 <li>安卓尚不明确</li>
 </ul>
-<h2 id="webkit-text-fill-color" class="article-heading"><a href="#webkit-text-fill-color" class="headerlink" title="-webkit-text-fill-color"></a>-webkit-text-fill-color<a class="article-anchor" href="#webkit-text-fill-color" aria-hidden="true"></a></h2><p>定义文本填充，一般与文本描边属性 <code>webkit-text-stroke</code> 共用。</p>
+<h2 id="webkit-text-fill-color" class="article-heading"><a href="#webkit-text-fill-color" class="headerlink" title="-webkit-text-fill-color"></a>-webkit-text-fill-color<a class="article-anchor" href="#webkit-text-fill-color" aria-hidden="true"></a></h2><p>定义文本填充，一般与文本描边属性 <code>-webkit-text-stroke</code> 共用。</p>
 <h3 id="u5C5E_u6027_u503C-11" class="article-heading"><a href="#u5C5E_u6027_u503C-11" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-11" aria-hidden="true"></a></h3><ul>
 <li>&lt;color&gt;：颜色值</li>
 <li><code>currentcolor</code>：元素 <code>color</code> 属性值</li>
@@ -274,7 +330,7 @@ var _hmt = _hmt || [];
 <li>安卓尚不明确</li>
 </ul>
 <h2 id="webkit-marquee" class="article-heading"><a href="#webkit-marquee" class="headerlink" title="-webkit-marquee"></a>-webkit-marquee<a class="article-anchor" href="#webkit-marquee" aria-hidden="true"></a></h2><p>定义滚动文本内容属性（缩写属性，类似<code>margin</code>）。</p>
-<h3 id="u4F7F_u7528_u8BED_u6CD5" class="article-heading"><a href="#u4F7F_u7528_u8BED_u6CD5" class="headerlink" title="使用语法"></a>使用语法<a class="article-anchor" href="#u4F7F_u7528_u8BED_u6CD5" aria-hidden="true"></a></h3><p><code>-webkit-marquee: direction increment repetition style speed</code></p>
+<h3 id="u4F7F_u7528_u8BED_u6CD5-1" class="article-heading"><a href="#u4F7F_u7528_u8BED_u6CD5-1" class="headerlink" title="使用语法"></a>使用语法<a class="article-anchor" href="#u4F7F_u7528_u8BED_u6CD5-1" aria-hidden="true"></a></h3><p><code>-webkit-marquee: direction increment repetition style speed</code></p>
 <h3 id="u5C5E_u6027_u503C-13" class="article-heading"><a href="#u5C5E_u6027_u503C-13" class="headerlink" title="属性值"></a>属性值<a class="article-anchor" href="#u5C5E_u6027_u503C-13" aria-hidden="true"></a></h3><ul>
 <li>&lt;direction&gt;：滚动方向<ul>
 <li><code>ahead</code>：从下到上滚动</li>
@@ -380,23 +436,30 @@ var _hmt = _hmt || [];
 <li>Safari 9.0 及更高版本</li>
 <li>安卓尚未明确</li>
 </ul>
+<h2 id="position_3A-webkit-sticky" class="article-heading"><a href="#position_3A-webkit-sticky" class="headerlink" title="position:-webkit-sticky"></a>position:-webkit-sticky<a class="article-anchor" href="#position_3A-webkit-sticky" aria-hidden="true"></a></h2><p>可以使得元素在页面没有滚动的情况下表现得像relative，在滚动条滚到该元素区域的时候根据top值的设置使元素固定离顶部的距离，表现像 <code>position:fixed</code>，也就是常见的吸顶需求效果。</p>
+<h3 id="u7279_u6027" class="article-heading"><a href="#u7279_u6027" class="headerlink" title="特性"></a>特性<a class="article-anchor" href="#u7279_u6027" aria-hidden="true"></a></h3><ul>
+<li><p>依赖父级元素滚动区域</p>
+</li>
+<li><p>定位参考物始终是 viewport，<code>transform</code> 等可以改变 <code>position:fixed</code> 定位参考物的属性也没办法改变 <code>position:-webkit-sticky</code> 的定位参考物</p>
+</li>
+<li><p><code>position:-webkit-sticky</code> 属性的元素固定区域只依赖其父元素的可滚动高度，如果其父元素高度小于元素本身的高度，fixed效果失效。</p>
+</li>
+</ul>
+<h3 id="u517C_u5BB9_u6027-16" class="article-heading"><a href="#u517C_u5BB9_u6027-16" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-16" aria-hidden="true"></a></h3><ul>
+<li>iOS 6.1 及更高版本</li>
+<li>iOS only</li>
+</ul>
 <h2 id="apple-system" class="article-heading"><a href="#apple-system" class="headerlink" title="-apple-system"></a>-apple-system<a class="article-anchor" href="#apple-system" aria-hidden="true"></a></h2><p>苹果操作系统会从两种不同外观和大小的字体进行自动转换去调节系统新字体 “San Francisco”，可以通过 CSS 规则</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="tag">font-family</span>: <span class="tag">-apple-system</span>, <span class="tag">sans-serif</span>;</span><br></pre></td></tr></table></figure>
-<p>让系统智能选择适配操作系统的字体。</p>
-<p>可以看一下下面两张在系统 OS X 10.11.1 下的对比图：</p>
-<p>没有添加 <code>-apple-system</code> 属性值：</p>
-<p><img src="http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-no.png" alt="image"></p>
-<p>添加了 <code>-apple-system</code> 属性值：</p>
-<p><img src="http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-yes.png" alt="image"> </p>
-<p>可以看到添加了 <code>-apple-system</code>，字体变得更圆润锐利</p>
+<p>让系统智能选择适配操作系统的字体，添加 <code>-apple-system</code> 可以使字体变得更圆润锐利。</p>
 <p>关于 <code>-apple-system</code> 更详细的介绍可以参考：</p>
 <p><a href="http://aotu.io/notes/2015/12/23/new-safari-9/">What’s New in Safari 9.0</a></p>
-<h3 id="u517C_u5BB9_u6027-16" class="article-heading"><a href="#u517C_u5BB9_u6027-16" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-16" aria-hidden="true"></a></h3><ul>
+<h3 id="u517C_u5BB9_u6027-17" class="article-heading"><a href="#u517C_u5BB9_u6027-17" class="headerlink" title="兼容性"></a>兼容性<a class="article-anchor" href="#u517C_u5BB9_u6027-17" aria-hidden="true"></a></h3><ul>
 <li>iOS 9.0 及更高版本</li>
 <li>Safari 9.0 及更高版本</li>
 <li>iOS / OS X only</li>
 </ul>
-<h2 id="u66F4_u591A" class="article-heading"><a href="#u66F4_u591A" class="headerlink" title="更多"></a>更多<a class="article-anchor" href="#u66F4_u591A" aria-hidden="true"></a></h2><p>更多 <code>-webkit-</code> CSS 属性介绍请参考：</p>
+<h2 id="u66F4_u591A_WebKit_CSS__u5C5E_u6027" class="article-heading"><a href="#u66F4_u591A_WebKit_CSS__u5C5E_u6027" class="headerlink" title="更多 WebKit CSS 属性"></a>更多 WebKit CSS 属性<a class="article-anchor" href="#u66F4_u591A_WebKit_CSS__u5C5E_u6027" aria-hidden="true"></a></h2><p>更多 <code>-webkit-</code> CSS 属性介绍请参考：</p>
 <ul>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference/Webkit_Extensions" target="_blank" rel="external">MDN文档 - Webkit Extensions </a></li>
 <li><a href="http://ued.ctrip.com/webkitcss/" target="_blank" rel="external">携程 UED - webkitcss</a></li>
@@ -404,7 +467,7 @@ var _hmt = _hmt || [];
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-01-06T07:37:52.000Z" itemprop="dateModified">上次更新：2016-01-06</time>
+                <time class="article-footer-updated" datetime="2016-01-07T08:25:28.000Z" itemprop="dateModified">上次更新：2016-01-07</time>
                 <a href="/guide/docs/css/query.html" class="article-footer-prev" title="媒体查询"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="/guide/docs/name/dir.html" class="article-footer-next" title="目录命名"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -416,7 +479,7 @@ var _hmt = _hmt || [];
           <aside class="article-toc" id="article-toc" role="navigation">
             <div id="article-toc-inner" class="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ul class="nav toc-nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-touch-callout"><span class="nav-text">-webkit-touch-callout</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-tap-highlight-color"><span class="nav-text">-webkit-tap-highlight-color</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-1"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-1"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-overflow-scrolling"><span class="nav-text">-webkit-overflow-scrolling</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-2"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-2"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-line-clamp"><span class="nav-text">-webkit-line-clamp</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-3"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-3"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-appearance"><span class="nav-text">-webkit-appearance</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-4"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-4"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-font-smoothing"><span class="nav-text">-webkit-font-smoothing</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-5"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-5"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-backface-visibility"><span class="nav-text">-webkit-backface-visibility</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-6"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-6"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-user-drag"><span class="nav-text">-webkit-user-drag</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-7"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-7"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-user-select"><span class="nav-text">-webkit-user-select</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-8"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-8"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-user-modify"><span class="nav-text">-webkit-user-modify</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-9"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-9"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-text-stroke"><span class="nav-text">-webkit-text-stroke</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-10"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-10"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-text-fill-color"><span class="nav-text">-webkit-text-fill-color</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-11"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-11"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-text-size-adjust"><span class="nav-text">-webkit-text-size-adjust</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-12"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-12"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-marquee"><span class="nav-text">-webkit-marquee</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F7F_u7528_u8BED_u6CD5"><span class="nav-text">使用语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-13"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-13"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-filter"><span class="nav-text">-webkit-filter</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-14"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-14"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-backdrop-filter"><span class="nav-text">-webkit-backdrop-filter</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-15"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-15"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apple-system"><span class="nav-text">-apple-system</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-16"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u66F4_u591A"><span class="nav-text">更多</span></a></li></ul>
+              <ul class="nav toc-nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-touch-callout"><span class="nav-text">-webkit-touch-callout</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-tap-highlight-color"><span class="nav-text">-webkit-tap-highlight-color</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-1"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-1"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-overflow-scrolling"><span class="nav-text">-webkit-overflow-scrolling</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-2"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-2"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-line-clamp"><span class="nav-text">-webkit-line-clamp</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-3"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-3"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-appearance"><span class="nav-text">-webkit-appearance</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-4"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-4"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-font-smoothing"><span class="nav-text">-webkit-font-smoothing</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-5"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-5"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-backface-visibility"><span class="nav-text">-webkit-backface-visibility</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-6"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-6"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-mask"><span class="nav-text">-webkit-mask</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F7F_u7528_u8BED_u6CD5"><span class="nav-text">使用语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-7"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-7"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-user-select"><span class="nav-text">-webkit-user-select</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-8"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-8"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-user-modify"><span class="nav-text">-webkit-user-modify</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-9"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-9"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-text-stroke"><span class="nav-text">-webkit-text-stroke</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-10"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-10"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-text-fill-color"><span class="nav-text">-webkit-text-fill-color</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-11"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-11"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-text-size-adjust"><span class="nav-text">-webkit-text-size-adjust</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-12"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-12"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-marquee"><span class="nav-text">-webkit-marquee</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F7F_u7528_u8BED_u6CD5-1"><span class="nav-text">使用语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-13"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-13"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-filter"><span class="nav-text">-webkit-filter</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-14"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-14"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webkit-backdrop-filter"><span class="nav-text">-webkit-backdrop-filter</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_u503C-15"><span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-15"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position_3A-webkit-sticky"><span class="nav-text">position:-webkit-sticky</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7279_u6027"><span class="nav-text">特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-16"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apple-system"><span class="nav-text">-apple-system</span></a><ul class="nav nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u517C_u5BB9_u6027-17"><span class="nav-text">兼容性</span></a></li></ul></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u66F4_u591A_WebKit_CSS__u5C5E_u6027"><span class="nav-text">更多 WebKit CSS 属性</span></a></li></ul>
               <a href="#" id="article-toc-top" class="article-toc-top">回到顶部</a>
             </div>
           </aside>

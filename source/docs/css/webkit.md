@@ -1,4 +1,4 @@
-title: 移动平台常用私有属性
+title: 移动端常用私有属性
 ---
 
 目前两大主流移动平台为 `iOS` 和 `Android`，有不少带 `-webkit-` 前辍的 CSS 私有属性以及一些 iOS only 属性，当中好些属性在日常需求中经常应用到。
@@ -43,7 +43,7 @@ title: 移动平台常用私有属性
 ### 属性值
 
 * `auto`：默认值，单手滚动，滚动没有惯性效果
-* `touch`：原生样式滚动，应用此属性会产生**层叠上下文**（会影响定位参照物的属性，类似 `opacity`、`masks`、`transforms`属性，影响到 `position` 的效果，甚至影响到 `position:fixed` 的定位参照物，）
+* `touch`：原生样式滚动，应用此属性值会产生**层叠上下文**（会影响定位参照物的属性，类似 `opacity`、`masks`、`transforms`属性，影响到 `position` 的效果，甚至影响到 `position:fixed` 的定位参照物，）
 
 ### 兼容性
 
@@ -84,6 +84,7 @@ title: 移动平台常用私有属性
 * `button`：渲染成 button 的风格
 * `checkbox`：渲染成 input checkbox 样式的复选框按钮
 * `radio `：渲染成 radio 的风格
+* ...
 
 更多属性值参考 [mozilla：-webkit-appearance 属性](https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance)
 
@@ -127,22 +128,78 @@ title: 移动平台常用私有属性
 * iOS 2.0 及更高版本的 Safari 浏览器可用
 * 大部分 Android
 
+## -webkit-mask
 
-## -webkit-user-drag
+定义多样的蒙板效果属性（缩写属性，类似 `margin`）
 
-设置整个元素而非它的内容可拖动，对应于标签属性 draggable，其中图片和链接默认为可拖动（draggable="true"），其他元素默认为不可拖动（draggable="false"）
+### 使用语法
+
+```
+<mask-image> [<mask-repeat> || <mask-attachment> || <mask-position> || <mask-origin> || <mask-clip> || <mask-composite>]*
+where 
+<mask-position> = [ <percentage> | <length> | left | center | right ] [ <percentage> | <length> | top  | center | bottom ]?
+```
+
+默认值：
+
+```css
+-webkit-mask: none repeat scroll 0% 0% padding border add;
+```
 
 ### 属性值
 
-* `auto`：使用默认的拖动行为。图片和链接默认为可拖动，其他元素默认为不可拖动。
-* `element`：整个元素而非它的内容可拖动。
-* `none`：元素不能被拖动。但可通过复制选中后拖动。
-* `inherit`：父级继承值
+* &lt;mask-image&gt;：为元素设置蒙板图片，蒙板图片会根据图片的透明区域对元素可视部分进行裁剪
+    * &lt;uri&gt;：图片链接作为蒙板图片
+    * &lt;gradient&gt;：渐变函数 `-webkit-gradient` 作为蒙板图片
+    * `none`：去掉蒙板图片
+
+* &lt;mask-repeat&gt;：定义蒙板图片是否平铺或平铺的方式
+    * `repeat`：默认值，水平和垂直方向平铺
+    * `repeat-x`：水平方向平铺
+    * `repeat-y`：垂直方向平铺
+    * `no-repeat`：不平铺
+
+* &lt;mask-attachment&gt;：如果 `-webkit-mask-image` 属性有设置，`attachment` 决定该图片是否相对视窗固定或随着其容器滚动
+    * `scroll`：默认值，随容器滚动
+    * `fixed`：相地视窗固定
+
+* &lt;mask-position&gt;：定义蒙板图片的初始位置，书写格式类似 `background-position`----`<mask-position>[, <mask-position>]*`
+    * &lt;percentage&gt;
+    * &lt;length&gt;
+    * `left`
+    * `right`
+    * `center`
+
+* &lt;mask-origin&gt;：定义蒙板图片定位相对起点，与 `webkit-mask-position` 属性相关。当 `-webkit-mask-attachment:fixed` 的时候，该属性不生效。
+    * `padding`：默认值，蒙板定位相对边距
+    * `border`：蒙板定位相对边框
+    * `content`：蒙板定位相对元素盒子内容
+  
+* &lt;mask-clip&gt;：如果 `-webkit-mask-image` 属性有设置，`-webkit-mask-clip` 将定义蒙板图片的裁剪区域
+    * `border`：默认值，蒙板图片延伸到容器的边框
+    * `padding`：蒙板图片延伸到容器的边距
+    * `content`：蒙板图片裁剪到元素盒子内容范围
+    * `text`：蒙板图片裁剪到元素文本范围
+    
+* &lt;mask-composite&gt;：定义蒙板图片重合的裁剪显示方式
+    * `add`：默认值，图片重合不裁剪
+    * `subtract`：去掉层级低的图形以及图片重合部分图形，只留层级高非重合部分图形
+    * `intersect`：只留重合部分图形
+    * `exclude`：只去掉重合部分图形
+
+有关属性更详细描述请参考：
+
+[w3 - css-masking](http://www.w3.org/TR/css-masking/)
+
+[MDN - -webkit-mask](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-mask)
+
+[携程 UED - -webkit-mask](http://ued.ctrip.com/webkitcss/)
 
 ### 兼容性
 
-* Safari 3.0 及更高版本
-* 大部分安卓手机
+* Safari 4.0 及更高版本
+* iOS 4.0 及更高版本
+* Android 2.1 及更高版本
 
 ## -webkit-user-select
 
@@ -194,7 +251,7 @@ title: 移动平台常用私有属性
 
 ## -webkit-text-fill-color
 
-定义文本填充，一般与文本描边属性 `webkit-text-stroke` 共用。
+定义文本填充，一般与文本描边属性 `-webkit-text-stroke` 共用。
 
 ### 属性值
 
@@ -342,6 +399,24 @@ title: 移动平台常用私有属性
 * Safari 9.0 及更高版本
 * 安卓尚未明确
 
+## position:-webkit-sticky
+
+可以使得元素在页面没有滚动的情况下表现得像relative，在滚动条滚到该元素区域的时候根据top值的设置使元素固定离顶部的距离，表现像 `position:fixed`，也就是常见的吸顶需求效果。
+
+### 特性
+
+* 依赖父级元素滚动区域
+
+* 定位参考物始终是 viewport，`transform` 等可以改变 `position:fixed` 定位参考物的属性也没办法改变 `position:-webkit-sticky` 的定位参考物
+
+* `position:-webkit-sticky` 属性的元素固定区域只依赖其父元素的可滚动高度，如果其父元素高度小于元素本身的高度，fixed效果失效。
+
+### 兼容性
+
+* iOS 6.1 及更高版本
+* iOS only
+
+
 ## -apple-system
 
 苹果操作系统会从两种不同外观和大小的字体进行自动转换去调节系统新字体 “San Francisco”，可以通过 CSS 规则
@@ -350,19 +425,7 @@ title: 移动平台常用私有属性
 font-family: -apple-system, sans-serif;
 ```
 
-让系统智能选择适配操作系统的字体。
-
-可以看一下下面两张在系统 OS X 10.11.1 下的对比图：
-
-没有添加 `-apple-system` 属性值：
-
-![image](http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-no.png)
-
-添加了 `-apple-system` 属性值：
-
-![image](http://aotu.io/assets/img/post/mihanX/safari-9/sys-font-yes.png) 
-
-可以看到添加了 `-apple-system`，字体变得更圆润锐利
+让系统智能选择适配操作系统的字体，添加 `-apple-system` 可以使字体变得更圆润锐利。
 
 关于 `-apple-system` 更详细的介绍可以参考：
 
@@ -374,7 +437,7 @@ font-family: -apple-system, sans-serif;
 * Safari 9.0 及更高版本
 * iOS / OS X only
 
-## 更多
+## 更多 WebKit CSS 属性
 
 更多 `-webkit-` CSS 属性介绍请参考：
 
