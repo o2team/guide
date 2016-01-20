@@ -61,9 +61,9 @@ ClassName的命名应该尽量精短、明确，必须以**字母开头命名**�
     	<div class="modulename_info_user">
     		<div class="modulename_info_user_img">
     			<img src="" alt="">
-    			<!-- 这个时候 jiui 为 modulename_info_user_img 首字母缩写-->
-    			<div class="jiui_tit"></div>
-    			<div class="jiui_txt"></div>
+    			<!-- 这个时候 miui 为 modulename_info_user_img 首字母缩写-->
+    			<div class="miui_tit"></div>
+    			<div class="miui_txt"></div>
     			...
     		</div>
     	</div>
@@ -113,7 +113,7 @@ ClassName的命名应该尽量精短、明确，必须以**字母开头命名**�
 <div class="ad"></div>
 ```
 
-这种情况不应该出现
+这种广告的英文或拼音类名不应该出现
 
 另外，**敏感不和谐字眼**也不应该出现，如：
 
@@ -121,7 +121,8 @@ ClassName的命名应该尽量精短、明确，必须以**字母开头命名**�
 <div class="fuck"></div>
 <div class="jer"></div>
 <div class="sm"></div>
-<div class="isis"></div> 
+<div class="gcd"></div> 
+<div class="ass"></div> 
 <div class="KMT"></div> 
 ...
 ```
