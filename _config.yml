@@ -4,8 +4,8 @@ description: "Best Coding Guidelines For Front-End Developer."
 author: 凹凸实验室
 language: zh-cn
 timezone: UTC
-url: http://aotu.io/guide
-root: /guide/
+url: http://guide.aotu.io/
+root: /
 permalink: news/:year/:month/:day/:title/
 archive_dir: news
 code_dir: downloads/code
