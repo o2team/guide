@@ -23,3 +23,6 @@ docs:
     name_image: name/image.html
     name_htmlcss: name/htmlcss.html
     name_class: name/classname.html
+  js:
+    js_language: js/language.html
+    js_code: js/code.html

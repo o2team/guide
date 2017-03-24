@@ -23,7 +23,7 @@ sidebar:
     overview: 概述
     common: 通用
     issues: 常见问题
-    html: HTML规范
+    html: HTML 规范
     html_code: 代码规范
     html_note: 注释规范
     html_template: 文件模版
@@ -33,7 +33,7 @@ sidebar:
     image_size: 图片大小
     image_quality: 图片质量
     image_import: 图片引入
-    css: CSS规范
+    css: CSS 规范
     css_code: 代码规范
     css_note: 注释规范
     css_sass: SASS 规范
@@ -45,4 +45,6 @@ sidebar:
     name_htmlcss: HTML/CSS 命名
     name_image: 图片命名
     name_class: ClassName 命名
-
+    js: JS 规范
+    js_language: 语言规范
+    js_code: 代码规范
