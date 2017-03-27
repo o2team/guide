@@ -3,343 +3,389 @@ title: 代码规范
 
 ## 编码规范
 
-CSS样式表是一个序列通用字符集，传输和存储过程中，这些字符必须由支持 US-ASCII（例如 UTF-8, ISO 8859-x, SHIFT JIS 等）字符编码方式编译
+统一团队的编码规范，有助于代码的维护。本章是传统意义上的 `Style Guideline`，目的是统一一些相对主观化的代码风格。
 
-### 文档内嵌样式表编码
+### 单行代码块
 
-> When a style sheet is embedded in another document, such as in the STYLE element or "style" attribute of HTML, the style sheet shares the character encoding of the whole document.
+在单行代码块中使用空格
 
-当样式出现在其它文档，如 HTML 的 STYLE 标签或标签属性 "style"，样式的编码由文档的决定。
+*不推荐*
 
-### 文档外链样式表编码
-
-> When a style sheet resides in a separate file, user agents must observe the following priorities when determining a style sheet's character encoding (from highest priority to lowest):
-
-> 1. An HTTP "charset" parameter in a "Content-Type" field (or similar parameters in other protocols)
-> 2. BOM and/or @charset 
-> 3. <link charset=""> or other metadata from the linking mechanism (if any)
-> 4. charset of referring style sheet or document (if any)
-> 5. Assume UTF-8
-
-文档外链样式表的编码可以由以下各项按照由高到低的优先级顺序决定：
-
-1. HTTP “Content-Type” 字段参数 “charset”（或其它协议相似的参数）
-2. BOM（byte-order mark）和（或）@charset
-3. Link 中的元数据设置（如果有的话）
-4. 引用样式表字符集或文档编码（如果有的话）
-5. 假定为 UTF-8 编码
-
-### 样式表编码
-
-> Authors using an @charset rule must place the rule at the very beginning of the style sheet, preceded by no characters. (If a byte order mark is appropriate for the encoding used, it may precede the @charset rule.)
-
-> @charset must be written literally, i.e., the 10 characters '@charset "' (lowercase, no backslash escapes), followed by the encoding name, followed by '";'.
-
-
-* @charset规则一定要在样式文件的第一行首个字符位置开始，否则的话就会有机会让 BOM 设置生效（如果有设置 BOM 的话）而优于 @charset 作为样式表的编码
-* `@charset "";` 一定要写上，并且用小写字母，不能出现转义符
-
-### 团队约定
-
-* 样式文件必须写上 @charset 规则，并且一定要在样式文件的第一行首个字符位置开始写，编码名用 “UTF-8”
-* 字符 @charset ""; 都用小写字母，不能出现转义符，编码名允许大小混写
-* 考虑到在使用“UTF-8”编码情况下 BOM 对代码的污染和编码显示的问题，在可控范围下，坚决不使用 BOM。（更多关于 BOM 可参考 [BOM的介绍](https://zh.wikipedia.org/wiki/%E4%BD%8D%E5%85%83%E7%B5%84%E9%A0%86%E5%BA%8F%E8%A8%98%E8%99%9F) 和 [「带 BOM 的 UTF-8」和「无 BOM 的 UTF-8」有什么区别？](http://www.zhihu.com/question/20167122) ）
-
-*推荐：*
-
-```css
-@charset "UTF-8";
-
-.jdc{}
+```js
+function foo () {return true}
+if (foo) {bar = 0}
 ```
 
-*不推荐：*
+*推荐*
 
-```css
-/**
- * @desc File Info
- * @author Author Name
- * @date 2015-10-10
- */
- 
-/* @charset规则不在文件首行首个字符开始 */
-@charset "UTF-8";
-
-.jdc{}
+```js
+function foo () { return true }
+if (foo) { bar = 0 }
 ```
 
-```css
-@CHARSET "UTF-8";
-/* @charset规则没有用小写 */
+### 大括号风格
 
-.jdc{}
-```
+在编程过程中，大括号风格与缩进风格紧密联系，用来描述大括号相对代码块位置的方法有很多。在 JavaScript 中，主要有三种风格，如下：
 
-```css
-/* 无@charset规则 */
-.jdc{}
-```
+- **One True Brace Style**
 
-更多关于样式编码：[CSS style sheet representation](http://www.w3.org/TR/2011/REC-CSS2-20110607/syndata.html#charset)
+  ```js
+  if (foo) {
+    bar()
+  } else {
+    baz()
+  }
+  ```
 
-## 代码风格
+- **Stroustrup**
 
-### 代码格式化
+  ```js
+  if (foo) {
+    bar()
+  }
+  else {
+    baz()
+  }
+  ```
 
-样式书写一般有两种：一种是紧凑格式 (Compact)
+- **Allman**
 
-```css
-.jdc{ display: block;width: 50px;}
-```
+  ```js
+  if (foo)
+  {
+    bar()
+  }
+  else
+  {
+    baz()
+  }
+  ```
 
-一种是展开格式（Expanded）
+我们团队约定使用 `One True Brace Style` 风格
 
-```css
-.jdc{
-    display: block;
-    width: 50px;
+### 变量命名
+
+当命名变量时，主流分为驼峰式命名（variableName）和下划线命名（variable_name）两大阵营。
+
+> 团队约定使用驼峰式命名
+
+### 拖尾逗号
+
+在 ECMAScript5 里面，对象字面量中的拖尾逗号是合法的，但在 IE8（非 IE8 文档模式）下，当出现拖尾逗号，则会抛出错误。
+
+拖尾逗号的例子：
+
+```js
+var foo = {
+  name: 'foo',
+  age: '22',
 }
 ```
 
-**团队约定**
+拖尾逗号的好处是，简化了对象和数组添加或删除元素，我们只需要修改新增的行即可，并不会增加差异化的代码行数。
 
-统一使用展开格式书写样式
+> 因为拖尾逗号有好也有不好，所以团队约定允许在最后一个元素或属性与闭括号 `]` 或 `}` 在不同行时，可以（但不要求）使用拖尾逗号。当在同一行时，禁止使用拖尾逗号。
 
+### 逗号空格
 
+逗号前后的空格可以提高代码的可读性，团队约定在逗号后面使用空格，逗号前面不加空格。
 
-### 代码大小写
+*不推荐*
 
-样式选择器，属性名，属性值关键字全部使用小写字母书写，属性字符串允许使用大小写。
+```js
+var foo = 1,bar = 2
+var foo = 1 , bar = 2
+var foo = 1 ,bar = 2
+```
 
-```css
-/* 推荐 */
-.jdc{
-    display:block;
-}
-    
-/* 不推荐 */
-.JDC{
-    DISPLAY:BLOCK;
+*推荐*
+
+```js
+var foo = 1, bar = 2
+```
+
+### 逗号风格
+
+逗号分隔列表时，在 JavaScript 中主要有两种逗号风格：
+- 标准风格，逗号放置在当前行的末尾
+- 逗号前置风格，逗号放置在下一行的开始位置
+
+> 团队约定使用标准风格
+
+*不推荐*
+
+```js
+var foo = 1
+,
+bar = 2
+
+var foo = 1
+, bar = 2
+
+var foo = ['name'
+          , 'age']
+```
+
+*推荐*
+
+```js
+var foo = 1,
+    bar = 2
+
+var foo = ['name',
+            'age']
+```
+
+### 计算属性的空格
+
+团队约定在对象的计算属性内，禁止使用空格
+
+*不推荐*
+
+```js
+obj['foo' ]
+obj[ 'foo']
+obj[ 'foo' ]
+```
+
+*推荐*
+
+```js
+obj['foo']
+```
+
+### 拖尾换行
+
+在非空文件中，存在拖尾换行是一个常见的 `UNIX` 风格，它的好处是可以方便在串联和追加文件时不会打断 `Shell` 的提示。在日常的项目中，保留拖尾换行的好处是，可以减少版本控制时的代码冲突。
+
+*不推荐*
+
+```js
+function func () {
+  // do something
 }
 ```
 
-### 选择器
+*推荐*
 
-* 尽量少用通用选择器 `*`
-* 不使用 ID 选择器
-* 不使用无具体语义定义的标签选择器
-
-```css
-/* 推荐 */
-.jdc {}
-.jdc li {}
-.jdc li p{}
-
-/* 不推荐 */
-*{}
-#jdc {}
-.jdc div{}
+```js
+function func () {
+  // do something
+}
+  // 此处是新的一行
 ```
 
-### 代码缩进
+> 可以通过 .editorconfig 添加 EOL
 
-统一使用四个空格进行代码缩进，使得各编辑器表现一致（各编辑器有相关配置）
+### 函数调用
 
-```css
-.jdc {
-    width: 100%;
-    height: 100%;
-}
+为了避免语法错误，团队约定在函数调用时，禁止使用空格
+
+*不推荐*
+
+```js
+fn ()
+fn
+()
+```
+
+*推荐*
+
+```js
+fn()
+```
+
+### 缩进
+
+代码保持一致的缩进，是作为工程师的职业素养。但缩进用两个空格，还是四个空格，是用 `Tab` 还是空格呢？这样的争论太多了，也得不出答案。本规范结合了市面上优秀的开源项目，姑且约定使用 `空格` 来缩进，而且缩进使用两个空格。
+
+那是不是不能使用 `Tab` 进行缩进了？我们可以通过配置 `.editorconfig` ，将 `Tab` 自动转换为空格。
+
+### 对象字面量的键值缩进
+
+团队约定对象字面量的键和值之间不能存在空格，且要求对象字面量的冒号和值之间存在一个空格
+
+*不推荐*
+
+```js
+var obj = { 'foo' : 'haha' }
+```
+
+*推荐*
+
+```js
+var obj = { 'foo': 'haha' }
+```
+
+### 构造函数首字母大写
+
+在 JavaScript 中 `new` 操作符用来创建某个特定类型的对象的一个实例，该类型的对象是由一个构造函数表示的。由于构造函数只是常规函数，唯一区别是使用 `new` 来调用。所以我们团队约定构造函数的首字母要大小，以此来区分构造函数和普通函数。
+
+*不推荐*
+
+```js
+var fooItem = new foo()
+```
+
+*推荐*
+
+```js
+var fooItem = new Foo()
+```
+
+### 构造函数的参数
+
+在 JavaScript 中，通过 `new` 调用构造函数时，如果不带参数，可以省略后面的圆括号。但这样会造成与整体的代码风格不一致，所以团队约定使用圆括号
+
+*不推荐*
+
+```js
+var person = new Person
+```
+
+*推荐*
+
+```js
+var person = new Person()
+```
+
+### 链式调用
+
+链式调用如果放在同一行，往往会造成代码的可读性差，但有些时候，短的链式调用并不会影响美观。所以本规范约定一行最多只能有四个链式调用，超过就要求换行。
+
+### 空行
+
+空白行对于分离代码逻辑有帮助，但过多的空行会占据屏幕的空间，影响可读性。团队约定最大连续空行数为 2
+
+*不推荐*
+
+```js
+var a = 1
+
+
+
+var b = 2
+```
+
+*推荐*
+
+```js
+var a = 1
+
+
+var b = 2
+```
+
+### 链式赋值
+
+链式赋值容易造成代码的可读性差，所以团队约定禁止使用链式赋值
+
+*不推荐*
+
+```js
+var a = b = c = 1
+```
+
+*推荐*
+
+```js
+var a = 1
+var b = 1
+var c = 1
+```
+
+### 变量声明
+
+JavaScript 允许在一个声明中，声明多个变量。团队约定在声明变量时，一个声明只能有一个变量
+
+*不推荐*
+
+```js
+var a, b, c
+```
+
+*推荐*
+
+```js
+var a
+var b
+var c
 ```
 
 ### 分号
 
-每个属性声明末尾都要加分号；
+JavaScript 在所有类 C 语言中是比较独特的，它不需要在每个语句的末尾有分号。在很多情况下，JavaScript 引擎可以确定一个分号应该在什么位置然后自动添加它。此特征被称为 自动分号插入 (ASI)，被认为是 JavaScript 中较为有争议的特征。
 
-```css
-.jdc {
-    width: 100%;
-    height: 100%;
+团队中对于是否应该使用分号，也有许多争论，本规范推荐不使用分号，因为我们认为好的工程师应该知道什么时候该加，什么时候不该加。
+
+相关参考 ：[semi](http://eslint.org/docs/rules/semi)
+
+### 代码块空格
+
+一致性是任何风格指南的重要组成部分。虽然在哪里放置块的开括号纯属个人偏好，但在整个项目中应该保持一致。不一致的风格将会分散读者阅读代码的注意力。
+
+> 团队约定代码块前要添加空格
+
+*不推荐*
+
+```js
+if (a){
+  b()
+}
+
+function a (){}
+```
+
+*推荐*
+
+```js
+if (a) {
+  b()
+}
+
+function a () {}
+```
+
+### 函数声明的空格
+
+当格式化一个函数，函数名或 function 关键字与左括号之间允许有空白。命名函数要求函数名和 function 关键字之间有空格，但是匿名函数要求不加空格。
+
+> 团队约定函数括号前要加空格
+
+*不推荐*
+
+```js
+function func(x) {
+  // ...
 }
 ```
 
-### 代码易读性
+*推荐*
 
-左括号与类名之间一个空格，冒号与属性值之间一个空格
-
-*推荐：*
-
-```css
-.jdc { 
-    width: 100%; 
-} 
-```
-
-*不推荐：*
-
-```css
-.jdc{ 
-    width:100%;
-} 
-```
-
-
-逗号分隔的取值，逗号之后一个空格
-
-*推荐：*
-
-```css
-.jdc {
-    box-shadow: 1px 1px 1px #333, 2px 2px 2px #ccc;
+```js
+function func (x) {
+  // ...
 }
 ```
 
-*不推荐：*
+### 操作符的空格
 
-```css
-.jdc {
-    box-shadow: 1px 1px 1px #333,2px 2px 2px #ccc;
-}
+团队约定操作符前后都需要添加空格
+
+*不推荐*
+
+```js
+var sum = 1+2
 ```
 
-为单个css选择器或新申明开启新行
+*推荐*
 
-*推荐：*
-
-```css
-.jdc, 
-.jdc_logo, 
-.jdc_hd {
-    color: #ff0;
-}
-.nav{
-    color: #fff;
-}
+```js
+var sum = 1 + 2
 ```
 
-*不推荐：*
+### BOM
 
-``` css
-.jdc,jdc_logo,.jdc_hd {
-    color: #ff0;
-}.nav{
-    color: #fff;
-}
-```
+Unicode 字节顺序标记 (BOM) 用来指定代码单元是高字节序还是低字节序。也就是说，是高位在前还是低位在前。UTF-8 不需要 BOM 来表明字节顺序，因为单个字节并不影响字节顺序。
 
-颜色值 `rgb()` `rgba()` `hsl()` `hsla()` `rect()` 中不需有空格，且取值不要带有不必要的 0
-
-*推荐：*
-
-```css
-.jdc {
-    color: rgba(255,255,255,.5);
-}
-```
-
-*不推荐：*
-
-```css
-.jdc {
-    color: rgba( 255, 255, 255, 0.5 );
-}
-```
-
-属性值十六进制数值能用简写的尽量用简写
-
-*推荐：*
-
-```css
-.jdc {
-    color: #fff;
-}
-```
-
-*不推荐：*
-
-```css
-.jdc {
-    color: #ffffff;
-}
-```
-
-不要为 `0` 指明单位
-
-*推荐：*
-
-```css
-.jdc {
-    margin: 0 10px;
-}
-```
-
-*不推荐：*
-
-```css
-.jdc {
-    margin: 0px 10px;
-}
-```
-
-### 属性值引号
-
-css属性值需要用到引号时，统一使用单引号
-
-```css
-/* 推荐 */
-.jdc { 
-    font-family: 'Hiragino Sans GB';
-}
-
-/* 不推荐 */
-.jdc { 
-    font-family: "Hiragino Sans GB";
-}
-```
-
-### 属性书写顺序
-
-建议遵循以下顺序：
-
-1. 布局定位属性：display / position / float / clear  / visibility / overflow 
-2. 自身属性：width / height / margin / padding / border / background
-3. 文本属性：color / font / text-decoration / text-align / vertical-align / white- space / break-word
-4. 其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient ...
-
-```css
-.jdc {
-    display: block;
-    position: relative;
-    float: left;
-    width: 100px;
-    height: 100px;
-    margin: 0 10px;
-    padding: 20px 0;
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    color: #333;
-    background: rgba(0,0,0,.5);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -o-border-radius: 10px;
-    -ms-border-radius: 10px;
-    border-radius: 10px;
-}
-```
-
-
-[mozilla官方属性顺序推荐](https://www.mozilla.org/css/base/content.css)
-
-### CSS3浏览器私有前缀写法
-
-CSS3 浏览器私有前缀在前，标准前缀在后
-
-```css
-.jdc {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -o-border-radius: 10px;
-    -ms-border-radius: 10px;
-    border-radius: 10px;
-}
-```
-更多关于浏览器私有前辍写法：[#Vendor-specific extensions](http://www.w3.org/TR/2011/REC-CSS2-20110607/syndata.html#vendor-keywords)
+相信不少同学遇到过 BOM 的坑，这里不多说了，切记不要使用 windows 的记事本改代码！
