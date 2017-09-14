@@ -13,7 +13,7 @@ ol, ul { list-style: none; }
 input, select, button, h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: inherit; }
 table { border-collapse: collapse; border-spacing: 0; }
 a { text-decoration: none; color: #666; }
-body { margin: 0 auto; min-width: 320px; max-width: 640px; height: 100%; font-size: 14px; fon-family: -apple-system,Helvetica,sans-serif; line-height: 1.5; color: #666; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
+body { margin: 0 auto; min-width: 320px; max-width: 640px; height: 100%; font-size: 14px; font-family: -apple-system,Helvetica,sans-serif; line-height: 1.5; color: #666; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
 input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 
 ```
