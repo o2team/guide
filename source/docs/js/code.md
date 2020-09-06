@@ -65,7 +65,7 @@ if (foo) { bar = 0 }
 
 ### 变量命名
 
-当命名变量时，主流分为驼峰式命名（variableName）和下划线命名（variable_name）两大阵营。
+当命名变量时，主流分为驼峰式命名（constiableName）和下划线命名（constiable_name）两大阵营。
 
 > 团队约定使用驼峰式命名
 
@@ -76,7 +76,7 @@ if (foo) { bar = 0 }
 拖尾逗号的例子：
 
 ```js
-var foo = {
+const foo = {
   name: 'foo',
   age: '22',
 }
@@ -93,15 +93,15 @@ var foo = {
 *不推荐*
 
 ```js
-var foo = 1,bar = 2
-var foo = 1 , bar = 2
-var foo = 1 ,bar = 2
+const foo = 1,bar = 2
+const foo = 1 , bar = 2
+const foo = 1 ,bar = 2
 ```
 
 *推荐*
 
 ```js
-var foo = 1, bar = 2
+const foo = 1, bar = 2
 ```
 
 ### 逗号风格
@@ -115,24 +115,24 @@ var foo = 1, bar = 2
 *不推荐*
 
 ```js
-var foo = 1
+const foo = 1
 ,
 bar = 2
 
-var foo = 1
+const foo = 1
 , bar = 2
 
-var foo = ['name'
+const foo = ['name'
           , 'age']
 ```
 
 *推荐*
 
 ```js
-var foo = 1,
+const foo = 1,
     bar = 2
 
-var foo = ['name',
+const foo = ['name',
             'age']
 ```
 
@@ -208,13 +208,13 @@ fn()
 *不推荐*
 
 ```js
-var obj = { 'foo' : 'haha' }
+const obj = { 'foo' : 'haha' }
 ```
 
 *推荐*
 
 ```js
-var obj = { 'foo': 'haha' }
+const obj = { 'foo': 'haha' }
 ```
 
 ### 构造函数首字母大写
@@ -224,13 +224,13 @@ var obj = { 'foo': 'haha' }
 *不推荐*
 
 ```js
-var fooItem = new foo()
+const fooItem = new foo()
 ```
 
 *推荐*
 
 ```js
-var fooItem = new Foo()
+const fooItem = new Foo()
 ```
 
 ### 构造函数的参数
@@ -240,13 +240,13 @@ var fooItem = new Foo()
 *不推荐*
 
 ```js
-var person = new Person
+const person = new Person
 ```
 
 *推荐*
 
 ```js
-var person = new Person()
+const person = new Person()
 ```
 
 ### 链式调用
@@ -260,20 +260,20 @@ var person = new Person()
 *不推荐*
 
 ```js
-var a = 1
+const a = 1
 
 
 
-var b = 2
+const b = 2
 ```
 
 *推荐*
 
 ```js
-var a = 1
+const a = 1
 
 
-var b = 2
+const b = 2
 ```
 
 ### 链式赋值
@@ -283,15 +283,15 @@ var b = 2
 *不推荐*
 
 ```js
-var a = b = c = 1
+const a = b = c = 1
 ```
 
 *推荐*
 
 ```js
-var a = 1
-var b = 1
-var c = 1
+const a = 1
+const b = 1
+const c = 1
 ```
 
 ### 变量声明
@@ -301,15 +301,15 @@ JavaScript 允许在一个声明中，声明多个变量。团队约定在声明
 *不推荐*
 
 ```js
-var a, b, c
+const a, b, c
 ```
 
 *推荐*
 
 ```js
-var a
-var b
-var c
+const a
+const b
+const c
 ```
 
 ### 分号
@@ -375,13 +375,13 @@ function func (x) {
 *不推荐*
 
 ```js
-var sum = 1+2
+const sum = 1+2
 ```
 
 *推荐*
 
 ```js
-var sum = 1 + 2
+const sum = 1 + 2
 ```
 
 ### BOM
