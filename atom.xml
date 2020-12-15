@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Aotu.io - 前端代码规范</title>
+  
+  <subtitle>Front-End Coding Guidelines</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://guide.aotu.io/"/>
+  <updated>2020-09-07T08:24:28.044Z</updated>
+  <id>http://guide.aotu.io/</id>
+  
+  <author>
+    <name>凹凸实验室</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>V1.0.0 Beta Released</title>
+    <link href="http://guide.aotu.io/news/2015/11/15/beta-released/"/>
+    <id>http://guide.aotu.io/news/2015/11/15/beta-released/</id>
+    <published>2015-11-15T00:00:00.000Z</published>
+    <updated>2020-09-07T08:24:28.044Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>MAC全栈开发环境搭建指南</code> 中英双语V1.0.0 Beta版本发布。感谢各位开源贡献人员。</p><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul><li><p>中文双语版本</p><p>英文为简版，6级刚刚及格抱歉了~<br>欢迎英文达人参与 <code>MAC全栈开发环境搭建指南</code> 的维护。</p></li><li><p>修复了配置站点根目录为网站子目录时切换语言404的bug。</p></li><li>去掉了retinajs的特性，现在srcset支持不错，没必要使用retinajs做响应式图片加载。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;MAC全栈开发环境搭建指南&lt;/code&gt; 中英双语V1.0.0 Beta版本发布。感谢各位开源贡献人员。&lt;/p&gt;
+&lt;h2 id=&quot;特性&quot;&gt;&lt;a href=&quot;#特性&quot; class=&quot;headerlink&quot; title=&quot;特性&quot;&gt;&lt;/a&gt;特性&lt;/h2&gt;&lt;ul&gt;
+&lt;l
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>V1.0.0 Preview (预览版)</title>
+    <link href="http://guide.aotu.io/news/2015/11/13/first-released/"/>
+    <id>http://guide.aotu.io/news/2015/11/13/first-released/</id>
+    <published>2015-11-13T00:00:00.000Z</published>
+    <updated>2020-09-07T08:24:28.044Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>MAC全栈开发环境搭建指南</code> 中文预览版发布。感谢各位开源贡献人员。</p><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul><li><strong><a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">HEXO</a></strong>: 使用hexo作为指南的静态站点引擎。</li><li>按照工作角色将指南分为通用、交互、视觉、前端开发、后台开发等几个部分。</li><li>修复了hexo文档大纲的bug。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;MAC全栈开发环境搭建指南&lt;/code&gt; 中文预览版发布。感谢各位开源贡献人员。&lt;/p&gt;
+&lt;h2 id=&quot;特性&quot;&gt;&lt;a href=&quot;#特性&quot; class=&quot;headerlink&quot; title=&quot;特性&quot;&gt;&lt;/a&gt;特性&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
