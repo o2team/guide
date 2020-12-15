@@ -376,9 +376,11 @@ class extends React.Component {
 
 ### Hooks 书写规范
 
-- Hooks 只能应用与函数式组件中
+- Hooks 只能应用于函数式组件中
 
-- 在函数组件最开始的地方声明所有 Hooks
+- 只在 React 函数最顶层使用 Hooks
+
+> 不要在循环，条件或嵌套函数中调用 Hook， 确保总是在你的 React 函数的最顶层调用他们
 
 ```jsx
 // bad
