@@ -91,7 +91,7 @@ console.log(b) // ReferenceError
 
   ```js
   // bad
-  const a = new Object{}
+  const a = new Object()
 
   // good
   const a = {}
