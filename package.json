@@ -44,7 +44,7 @@
     "gulp-useref": "^3.0.0",
     "imagemin-pngquant": "^4.2.0",
     "js-yaml": "^3.4.3",
-    "shelljs": "^0.5.3"
+    "shelljs": "^0.8.5"
   },
   "optionalDependencies": {
     "hexo-browsersync": "^0.1.0"
